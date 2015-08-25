@@ -13,7 +13,6 @@ function loadTrainingSet ()
         trainSet{i, 1} = i;
         trainSet{i, 2} = char(validation_set(i));
     end
-    
-    
+
     save('./mat/trainSet', 'trainSet');
 end
