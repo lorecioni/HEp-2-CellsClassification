@@ -7,13 +7,13 @@ load(['./mat/signaturesFV_K' int2str(K)]);
 
 % SVM Classifier   
 [msgStr,msgId] = lastwarn;
-warnStruct = warning('off',msgId); %Disable warnings for SVM
+if (strcmp(msgId, '') ~= 1)
+    warnStruct = warning('off',msgId); %Disable warnings for SVM
+end
 
 t = templateSVM('KernelFunction','gaussian');
-kfolds = 15;
+kfolds = 12;
 model = fitcecoc(signatures', labels, 'Learners', t, 'Prior', 'uniform', 'CrossVal', 'on', 'KFold', kfolds);
-
-warning(warnStruct); %Restore warnings
 
 predictedLabels = kfoldPredict(model);
 
