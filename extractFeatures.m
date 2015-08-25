@@ -1,5 +1,5 @@
 clear; clc;
-addpath('./utils/gabor');
+addpath('./gabor');
 import configuration.*;
 load('./mat/trainSet.mat');
 
@@ -8,7 +8,7 @@ Gabor_options.Width = 11;
 Gabor_options.num_theta = 4;
 Gabor_options.num_scale = 3; 
             
-[GR,GI] = Create_GaborFilters (Gabor_options);
+[GR, GI] = Create_GaborFilters (Gabor_options);
 
 %Processed images counter
 counter = 1;
