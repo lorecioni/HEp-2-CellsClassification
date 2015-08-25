@@ -19,5 +19,6 @@ classdef configuration
        %Image resize (if set to false image will not be resized)
        resize = true;
        resizeTo = 250;
+       
    end
 end
