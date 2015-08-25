@@ -1,16 +1,17 @@
-function save_signatures (K)
-    load(['./mat/obj_K' int2str(K)]);
-    d = obj.NDimensions;
-    
-     load('./mat/Cell_Gabor_B20');
-     Number_Train_Samples = length(TrainSet.labels);
-     signatures = zeros(K*d , Number_Train_Samples);
+clear; clc;
+load(['./mat/GMModel_K' int2str(K)]);
+load('./mat/Cov_Gabor');
 
-     for i=1:Number_Train_Samples
-         tempM = TrainSet.X(:,1:TrainSet.Nblocks(i),i);
-         signatures(:,i) = computeMuEff(tempM,obj);          
-        i
-     end
+d = GMModel.NDimensions;
+    
+image_number = configuration.image_number;
+signatures = zeros(K * d , image_number);
+
+for i=1:image_number
+    tempM = TrainSet.X(:,1:TrainSet.Nblocks(i),i);
+    signatures(:,i) = computeMuEff(tempM,GMModel);          
+    i
+end
 
     labels = TrainSet.labels;
 

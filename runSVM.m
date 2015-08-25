@@ -3,7 +3,7 @@ function runSVM (K)
 
     % SVM Classifier   
     t = templateSVM('KernelFunction','gaussian');
-    model = fitcecoc(signatures', labels, 'Learners', t, 'Prior','uniform', 'CrossVal', 'on');
+    model = fitcecoc(signatures', labels, 'Learners', t, 'Prior', 'uniform', 'CrossVal', 'on');
     predictedLabels = kfoldPredict(model);
     
     correctClassifiedCells = sum(strcmp(labels, predictedLabels'))

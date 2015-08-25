@@ -1,5 +1,5 @@
 /dataset/immagini_contest/
 /dataset/*.pdf
-/mat/obj*.mat
+/mat/GMM*.mat
 /mat/signatures*.mat
-/mat/Cell*.mat
+/mat/Cov*.mat

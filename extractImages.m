@@ -13,11 +13,12 @@ Gabor_options.num_scale = 3;
 %Processed images counter
 counter = 1;
 
-block_size = 20;
-delta = 5;
+block_size = 100;
+delta = 20;
 threshold = 0.1;
 
-fprintf('Image processed: 0 - Percentage: 0.00%%\n');
+fprintf('Image processed: 0 / 0.00 %% - Elapsed Time: 0.00 s\n');
+start_time = clock;
 
 for image_id = 1:configuration.image_number
     filename = [configuration.image_path configuration.image_file_prefix ...
@@ -51,8 +52,9 @@ for image_id = 1:configuration.image_number
     end
     cov_Sample.y(counter) = trainSet(image_id, 2);
     cov_Sample.Nblocks(counter) = block_ind - 1;
-    fprintf('Image processed: %d - Percentage: %.2f %%\n', counter, ...
+    fprintf('Image processed: %d / %.2f %%', counter, ...
         (counter * 100/configuration.image_number));
+    fprintf(' - Elapsed time: %.2f s\n', etime(clock, start_time));
     counter = counter + 1;  
 end
  

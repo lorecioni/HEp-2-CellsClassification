@@ -21,6 +21,6 @@ classdef configuration
        resizeTo = 500;
        
        %GMM / SVM K
-       K = 16;
+       K = 20;
    end
 end
