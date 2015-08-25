@@ -18,9 +18,9 @@ classdef configuration
        
        %Image resize (if set to false image will not be resized)
        resize = true;
-       resizeTo = 500;
+       resizeTo = 1000;
        
-       %GMM / SVM K
-       K = 20;
+       %GMM K
+       K = 16;
    end
 end

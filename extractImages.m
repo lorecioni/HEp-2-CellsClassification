@@ -3,6 +3,8 @@ addpath('./gabor');
 addpath('./utils');
 load('./mat/trainSet.mat');
 
+fprintf('-- Gabor Features Extraction --\n\n');
+
 %Gabor Filter options
 Gabor_options.Width = 11;
 Gabor_options.num_theta = 4;
@@ -13,7 +15,7 @@ Gabor_options.num_scale = 3;
 %Processed images counter
 counter = 1;
 
-block_size = 100;
+block_size = 80;
 delta = 20;
 threshold = 0.1;
 
