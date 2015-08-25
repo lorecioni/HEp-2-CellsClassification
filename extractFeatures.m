@@ -1,6 +1,6 @@
 clear; clc;
 addpath('./gabor');
-import configuration.*;
+addpath('./utils');
 load('./mat/trainSet.mat');
 
 %Gabor Filter options
@@ -39,9 +39,12 @@ for image_id = 1:configuration.image_number
             block = I(temp1, temp2, :);
             mskBlock = mask(temp1, temp2);
             
+            %Considering only green level or rgb2gray(block)
+            block = block(:, :, 2);
+            
             [fea, flag] = Compute_Gabor_Cov_Features(block, GR, GI, mskBlock, threshold);
             if flag == 1
-                cov_Sample.X(:, block_ind,counter) = map2IDS_vectorize(fea, 1);                       
+                cov_Sample.X(:, block_ind, counter) = map2IDS_vectorize(fea);                       
                 block_ind = block_ind + 1;                              
             end
          end
@@ -57,4 +60,4 @@ TrainSet.Nblocks = cov_Sample.Nblocks;
 TrainSet.X = cov_Sample.X;
 TrainSet.labels = cov_Sample.y;
 
-save('./mat/Cell_Gabor_B20','TrainSet');
+save('./mat/Cov_Gabor','TrainSet');
