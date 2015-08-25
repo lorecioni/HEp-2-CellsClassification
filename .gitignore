@@ -1,0 +1,5 @@
+/dataset/immagini_contest/
+/dataset/*.pdf
+/mat/obj*.mat
+/mat/signatures*.mat
+/mat/Cell*.mat
