@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2014.4.22)  27 AUG 2015 15:13
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2014.4.22)  1 SEP 2015 09:58
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -890,31 +890,40 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 \tf@toc=\write3
 \openout3 = `relazione.toc'.
 
- (./introduzione.tex) (./teoria.tex [1
+ (./introduzione.tex [1
 
-{/usr/local/texlive/2013/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]) (./dat
-aset.tex)
-(./risultati.tex) (./implementazione.tex) (./conclusioni.tex) [2]
-(./relazione.aux) ) 
+{/usr/local/texlive/2013/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 7.
+
+Underfull \hbox (badness 10000) in paragraph at lines 9--9
+[][]\OT1/cmr/m/n/10 HEp-2 Da-ta-set - http://mivia.unisa.it/datasets/biomedical
+-image-datasets/hep2-image-
+ []
+
+) (./teoria.tex) (./dataset.tex) (./risultati.tex) (./implementazione.tex)
+(./conclusioni.tex) [2] (./relazione.aux) ) 
 Here is how much of TeX's memory you used:
- 5462 strings out of 493315
- 74605 string characters out of 6137904
- 156732 words of memory out of 5000000
- 8805 multiletter control sequences out of 15000+600000
+ 5464 strings out of 493315
+ 74628 string characters out of 6137904
+ 153732 words of memory out of 5000000
+ 8807 multiletter control sequences out of 15000+600000
  10763 words of font info for 37 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 38i,7n,32p,1568b,246s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfo
-nts/cm/cmbx10.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfon
-ts/cm/cmbx12.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfont
-s/cm/cmr10.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/
-cm/cmr12.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm
-/cmti10.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/
-cmti12.pfb>
-Output written on relazione.pdf (2 pages, 87580 bytes).
+ 38i,8n,32p,794b,246s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/local/texlive/2013/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2013/texmf-dist/f
+onts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2013/texmf-dist/fo
+nts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2013/texmf-dist/font
+s/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2013/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2013/texmf-dist/fonts/typ
+e1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmti12.pfb>
+Output written on relazione.pdf (2 pages, 103566 bytes).
 PDF statistics:
- 35 PDF objects out of 1000 (max. 8388607)
- 24 compressed objects within 1 object stream
+ 43 PDF objects out of 1000 (max. 8388607)
+ 30 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
