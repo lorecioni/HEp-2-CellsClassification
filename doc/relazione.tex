@@ -1,0 +1,55 @@
+\documentclass[a4paper,12pt]{article} 
+\usepackage[utf8]{inputenc} 
+\usepackage[italian]{babel} 
+\usepackage{enumerate}
+\usepackage{enumitem}
+\usepackage{graphicx}
+\usepackage{listings}
+\usepackage{wrapfig}
+\usepackage{subfigure}
+\usepackage[a4paper,top=3cm,bottom=3cm,left=3cm,right=3cm]{geometry}
+\usepackage{array}
+\usepackage{tablefootnote}
+\usepackage{float}
+\setlength\extrarowheight{2pt}
+
+\title{\bf Classificazione di cellule epiteliali HEp-2 mediante l'utilizzo dei tensori di Fisher} 
+\date {27 Agosto 2015}
+\author{Lorenzo Cioni\\\textit{{\small lore.cioni@gmail.com}}}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+
+Analizzare e classificare le cellule epiteliali di tipo 2 (HEp-2) mediante l'utilizzo della tecnica della immunofluorescenza indiretta è uno standard per rilevare malattie al tessuto connettivo umano, come ad esempio l'Artrite Reumatoide. Purtroppo questo metodo è molto costoso in termini di tempo e di lavoro impiegato e particolarmente soggettivo.
+
+Questo elaborato ha come finalità quella di implementare un metodo per la classificazione di questo tipo di cellule basato sull'utilizzo del descrittore di covarianza e dei tensori di Fisher per l'estrazione di \emph{features} dalle immagini.
+\end{abstract}
+
+\tableofcontents
+
+\input{introduzione}
+\input{teoria}
+\input{dataset}
+\input{risultati}
+\input{implementazione}
+\input{conclusioni}
+
+\begin{thebibliography}{1}
+
+\bibitem{vecchioBib}
+Masoud Faraki, Mehrtash T. Harandi, Arnold Wiliem, Brian C. Lovell, \emph{Fisher tensors for classifying human epithelial cells}.\hskip 1em plus
+  0.5em minus 0.4em\relax Pattern Recognition, Volume 47, 2014, pp. 2348 - 2359.
+
+\bibitem{clustBib}
+Oncel Tuzel, Fatih Porikli, Peter Meer, \emph{Region Covariance: A Fast Descriptor for
+Detection and Classification}.\hskip 1em plus
+  0.5em minus 0.4em\relax Mitsubishi Electric Research Laboratories, Inc., 2006.
+
+
+\end{thebibliography}
+
+
+
+\end{document}

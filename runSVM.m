@@ -5,21 +5,26 @@ start_time = clock;
 K = configuration.K;
 load(['./mat/signaturesFV_K' int2str(K)]);
 
-% SVM Classifier   
 [msgStr,msgId] = lastwarn;
 if (strcmp(msgId, '') ~= 1)
     warnStruct = warning('off',msgId); %Disable warnings for SVM
 end
 
+% Using gaussian kernel
 t = templateSVM('KernelFunction','gaussian');
 kfolds = 12;
-model = fitcecoc(signatures', labels, 'Learners', t, 'Prior', 'uniform', 'CrossVal', 'on', 'KFold', kfolds);
 
+% Fit SVM model. Using matlab function for multiclass training
+model = fitcecoc(signatures', labels, 'Learners', t, ... 
+    'Prior', 'uniform', 'CrossVal', 'on', 'KFold', kfolds);
+
+% Predict labels on the model
 predictedLabels = kfoldPredict(model);
 
-% Result evaluation
+% Generate confusion matrix
 [confusionMatrix, classes] = confusionmat(labels, predictedLabels');
 
+% Evaluate results
 classFrequency = sum(confusionMatrix, 2);
 classCorrectedPred = diag(confusionMatrix);
 classCorrectRate = (classCorrectedPred .* 100) ./ classFrequency;
