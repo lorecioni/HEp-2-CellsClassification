@@ -1,6 +1,6 @@
 #HEp-2 Cells Classification
 
-**Configuration** 
+*Configuration*
 
 Before launching the program edit configuration file.
 
@@ -13,7 +13,7 @@ Before launching the program edit configuration file.
 - `resizeTo`: resize dimension.
 - `K`: values of K used in GMM.
 
-**Running** 
+*Running*
 
 Run the code as follows: 
 
