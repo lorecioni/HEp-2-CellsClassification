@@ -1,6 +1,6 @@
 #HEp-2 Cells Classification#
 
-Matlab code implementing [Fisher tensors for classifying human epithelial cells](http://www.sciencedirect.com/science/article/pii/S0031320313004214) for ICPR 2012 Contest on HEp-2 Cells Classification. Here you can find the [dataset](http://mivia.unisa.it/hep2contest/).
+Matlab code implementing [Fisher tensors for classifying human epithelial cells](http://www.sciencedirect.com/science/article/pii/S0031320313004214) for ICPR 2012 Contest on HEp-2 Cells Classification. Here you can find the [dataset](http://mivia.unisa.it/datasets/biomedical-image-datasets/hep2-image-dataset/).
 
 ###Configuration###
 
