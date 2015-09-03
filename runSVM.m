@@ -5,10 +5,7 @@ start_time = clock;
 K = configuration.K;
 load(['./mat/signaturesFV_K' int2str(K)]);
 
-[msgStr,msgId] = lastwarn;
-if (strcmp(msgId, '') ~= 1)
-    warnStruct = warning('off',msgId); %Disable warnings for SVM
-end
+image_number = length(labels);
 
 % Using gaussian kernel
 t = templateSVM('KernelFunction','gaussian');
@@ -33,9 +30,9 @@ table(classes, classFrequency, classCorrectedPred, classCorrectRate, ...
     'VariableNames', {'Class', 'Total', 'Correct', 'Rate'})
 
 correctClassifiedCells = sum(classCorrectedPred);
-fprintf('Correct classified cells: %d / %d\n', correctClassifiedCells, configuration.image_number);
+fprintf('Correct classified cells: %d / %d\n', correctClassifiedCells, image_number);
 
-accuracy = correctClassifiedCells/configuration.image_number;
+accuracy = correctClassifiedCells/image_number;
 fprintf('Accuracy: %.2f %%\n', accuracy * 100);
 
 fprintf('Elapsed time: %.2f s\n\n', etime(clock, start_time));

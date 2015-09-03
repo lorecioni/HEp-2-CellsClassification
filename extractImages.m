@@ -9,14 +9,16 @@ fprintf('-- Gabor Features Extraction --\n\n');
 Gabor_options.Width = 11;
 Gabor_options.num_theta = 4;
 Gabor_options.num_scale = 3; 
+%Gabor shows plot
+Gabor_options.show_plot = false;
             
 [GR, GI] = Create_GaborFilters (Gabor_options);
 
 %Processed images counter
 counter = 1;
 
-block_size = 100;
-delta = 40;
+block_size = 80;
+delta = 20;
 threshold = 0.1;
 
 start_time = clock;
@@ -24,7 +26,7 @@ start_time = clock;
 imagefiles = dir([configuration.image_path '*.' configuration.image_ext]);      
 image_number = length(imagefiles);    % Number of files found
 
-fprintf('Procesing %d images\n\n', image_number);
+fprintf('Processing %d images\n\n', image_number);
 fprintf('Image processed: 0 / 0.00 %% - Elapsed Time: 0.00 s\n');
 
 for image_id = 1:image_number

@@ -10,7 +10,7 @@ addpath utils;
 
 d = GMModel.NDimensions;
     
-image_number = configuration.image_number;
+image_number = length(TrainSet.labels);
 signatures = zeros(K * d , image_number);
 
 fprintf('Image processed: 0 / 0.00 %% - Elapsed Time: 0.00 s\n');
