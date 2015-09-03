@@ -3,7 +3,7 @@ addpath('./gabor');
 addpath('./utils');
 load('./mat/trainSet.mat');
 
-fprintf('-- Gabor Features Extraction --\n\n');
+fprintf('-- Covariance Features Extraction --\n\n');
 
 %Gabor Filter options
 Gabor_options.Width = 11;
@@ -25,6 +25,10 @@ start_time = clock;
 
 imagefiles = dir([configuration.image_path '*.' configuration.image_ext]);      
 image_number = length(imagefiles);    % Number of files found
+
+if(image_number > configuration.max_images)
+    image_number = configuration.max_images;
+end
 
 fprintf('Processing %d images\n\n', image_number);
 fprintf('Image processed: 0 / 0.00 %% - Elapsed Time: 0.00 s\n');

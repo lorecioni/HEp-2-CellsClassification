@@ -9,11 +9,10 @@ image_number = length(labels);
 
 % Using gaussian kernel
 t = templateSVM('KernelFunction','gaussian');
-%kfolds = 7;
 
 % Fit SVM model. Using matlab function for multiclass training
-model = fitcecoc(signatures', labels, 'Learners', t, ... 
-    'Prior', 'uniform', 'CrossVal', 'on');
+model = fitcecoc(signatures', labels, 'Learners', t, ...
+    'Prior', 'uniform', 'CrossVal', 'on', 'KFold', 10);
 
 % Predict labels on the model
 predictedLabels = kfoldPredict(model);

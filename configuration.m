@@ -6,6 +6,9 @@ classdef configuration
        image_path = 'dataset/immagini_contest/';       
        image_ext = 'bmp';
        
+       %Max number of image in folder to be processed
+       max_images = 500;
+       
        %Validation file for training
        validation_file = 'dataset/Validation.csv';  
               
