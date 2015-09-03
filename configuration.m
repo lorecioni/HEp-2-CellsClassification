@@ -15,7 +15,7 @@ classdef configuration
        classes = {'Punteggiato', 'Nucleolare', 'Citoplasmico', 'Omogeneo', 'Granulare', 'Negativo', 'Altro'};
        
        %Image resize (if set to false image will not be resized)
-       resize = true;
+       resize = false;
        resizeTo = 1100;
        
        %GMM K
