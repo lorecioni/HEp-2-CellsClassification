@@ -1,5 +1,5 @@
 function [gabordata] = Apply_Gabor_Transform(img, downsampling, GR, GI)
-
+    
     A = im2double(img);
     [Sx,Sy]=size(A);
     B = [];
