@@ -5,9 +5,7 @@ classdef configuration
        %Number of image to be processed
        image_number = 149; 
        
-       %Image path, filename prefix and extension
        image_path = 'dataset/immagini_contest/';       
-       image_file_prefix = 'Siero_';
        image_ext = 'bmp';
        
        %Validation file for training
@@ -18,7 +16,7 @@ classdef configuration
        
        %Image resize (if set to false image will not be resized)
        resize = true;
-       resizeTo = 1000;
+       resizeTo = 1100;
        
        %GMM K
        K = 16;
