@@ -42,9 +42,23 @@ Nel programma viene utilizzato un set di filtri di Gabor con 4 diverse angolazio
     \caption{{\small \textit{Set di filtri di Gabor con 4 angolazioni e 3 scale}}}
 \end{figure}
 
-Per ciascun pixel dell'immagine viene dunque calcolato il vettore delle features ottenute mediante la convoluzione dell'immagine con i filtri di Gabor (dividendo la parte reale dalla parte immaginaria).
+Per ciascun pixel dell'immagine viene dunque calcolato il vettore delle \emph{features} ottenute mediante la convoluzione dell'immagine con i filtri di Gabor (dividendo la parte reale dalla parte immaginaria).
 
+\subsection{Descrittore di Covarianza}
 
-\subsection{Covariance Descriptor}
+Il Descrittore di Covarianza (Covariance Descriptor\footnote{Oncel Tuzel, Fatih Porikli, Peter Meer, \emph{Region Covariance: A Fast Descriptor for
+Detection and Classification} Mitsubishi Electric Research Laboratories, Inc., 2006.}, CovD) viene utilizzato in letteratura per descrivere e caratterizzare regioni di immagini. 
+
+Data un'immagine con associato, a ciascun pixel, un vettore di \emph{features}, il Descrittore di Covarianza codifica informazioni che riguardano le \emph{varianze} di queste ultime all'interno di una regione, la loro correlazione e la loro distribuzione nello spazio. Questo metodo è molto utilizzato in particolare modo quando si ha bisogno di rimanere invarianti rispetto all'illuminazione o alla rotazione.
+
+Data un'immagine $I$ con associato, per ciascun pixel $(x, y)$, il vettore di features di dimensione $d$, si considera $F$ come l'immagine di features a $d$ livelli. Viene dunque considerata una regione di F tale che $R \subset F$ e consideriamo $\{f_i\}_{i = 1,\ldots, n} \in R$ la $i$-esima features, con $n$ numero di pixels della regione.
+
+A questo punto la regione $R$ viene rappresentata da una matrice di covarianza di dimensione $d X d$ dei \emph{features points}:
+
+$$C = \frac{1}{n -1} \sum_{k = 1}^{n} (f_k - \mu)(f_k - \mu)^T$$
+
+con $\mu$ la media dei \emph{features points}.
+
+Poichè la matrice $C$ è definita positiva e simmetrica può essere considerata un \emph{tensore}. 
 
 \subsection{Fisher Tensors}

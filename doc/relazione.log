@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2014.4.22)  3 SEP 2015 18:40
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2014.4.22)  3 SEP 2015 19:05
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1025,30 +1025,32 @@ File: images/filterbank.png Graphic file (type png)
 <use images/filterbank.png>
 Package pdftex.def Info: images/filterbank.png used on input line 41.
 (pdftex.def)             Requested size: 213.39568pt x 168.03073pt.
-) (./dataset.tex) (./risultati.tex)
-(./implementazione.tex) (./conclusioni.tex) [3pdfTeX warning (ext4): destinatio
-n with the same identifier (name{figure.1}) has been already used, duplicate ig
-nored
+ [3pdfTeX warning (ext4): destination with the same identifier (name{figure.1})
+ has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.45 
-     pdfTeX warning (ext4): destination with the same identifier (name{figure.2
-}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.45 
-      <./images/gaborfilter.jpg> <./images/filterbank.png>]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 58.
- [4pdfTeX warning (ext4): destination with the same identifier (name{cite.}) ha
+l.52 D
+      ata un'immagine con associato, a ciascun pixel, un vettore di \emph{fe...
+pdfTeX warning (ext4): destination with the same identifier (name{figure.2}) ha
 s been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.58 \end{document}
-                   pdfTeX warning (ext4): destination with the same identifier 
-(name{cite.}) has been already used, duplicate ignored
+l.52 D
+      ata un'immagine con associato, a ciascun pixel, un vettore di \emph{fe...
+ <./images/gaborfilter.jpg> <./images/filterbank.png>]) (./dataset.tex)
+(./risultati.tex) (./implementazione.tex) (./conclusioni.tex) [4pdfTeX warning 
+(ext4): destination with the same identifier (name{cite.}) has been already use
+d, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.53 
+     ]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 58.
+ [5pdfTeX warning (ext4): destination with the same identifier (name{cite.}) ha
+s been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
@@ -1059,7 +1061,7 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 58.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 58.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 58.
 Package rerunfilecheck Info: File `relazione.out' has not changed.
-(rerunfilecheck)             Checksum: A2390B0749C06095345B7367DC0BC6AE;530.
+(rerunfilecheck)             Checksum: 8B61812E3DEA5281C34BD413EA82FCD6;534.
 
 
 LaTeX Warning: There were multiply-defined labels.
@@ -1067,31 +1069,33 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 58.
  ) 
 Here is how much of TeX's memory you used:
- 8932 strings out of 493315
- 127669 string characters out of 6137904
+ 8935 strings out of 493315
+ 127694 string characters out of 6137904
  231866 words of memory out of 5000000
- 12222 multiletter control sequences out of 15000+600000
+ 12223 multiletter control sequences out of 15000+600000
  11109 words of font info for 38 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 30i,8n,32p,910b,446s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 30i,8n,32p,910b,444s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 ></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
-</usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><
-/usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></u
-sr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr
-/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/l
-ocal/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/loca
-l/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/t
-exlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texl
-ive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texli
-ve/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive
-/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2
-013/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/20
-13/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on relazione.pdf (4 pages, 223057 bytes).
+</usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><
+/usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></
+usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></us
+r/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/
+local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/lo
+cal/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/loca
+l/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/t
+exlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texl
+ive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive
+/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/
+2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/20
+13/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2013
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2013/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
+Output written on relazione.pdf (5 pages, 246407 bytes).
 PDF statistics:
- 156 PDF objects out of 1000 (max. 8388607)
- 131 compressed objects within 2 object streams
- 24 named destinations out of 1000 (max. 500000)
+ 171 PDF objects out of 1000 (max. 8388607)
+ 143 compressed objects within 2 object streams
+ 26 named destinations out of 1000 (max. 500000)
  91 words of extra memory for PDF output out of 10000 (max. 10000000)
 
