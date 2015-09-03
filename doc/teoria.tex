@@ -17,6 +17,32 @@ con
 $$x' = x \cos \theta + y \sin \theta$$
 $$y' = - x \cos \theta + y \sin \theta$$
 
+I parametri del filtro sono:
+\begin{itemize}
+\item $\theta$: orientazione del filtro, espressa in gradi.
+\item $\lambda$: lunghezza d'onda del fattore coseno, espressa in pixels.
+\item $\gamma$: specifica l'ellitticità del supporto della funzione di Gabor.
+\item $\sigma$: è il parametro che regola l'inviluppo Gaussiano.
+\end{itemize}
+
+\begin{figure}[H] 
+  \centering
+    \includegraphics[width=0.5\textwidth]{images/gaborfilter.jpg}
+    \vspace{-0.5cm}
+    \caption{{\small \textit{Esempio di filtro di Gabor 2D}}}
+\end{figure}
+
+Al fine di estrarre utili \emph{features} da un'immagine è utile utilizzare un set di filtri di Gabor con parametri diversi, ad esempio la scala e l'orientazione.
+
+Nel programma viene utilizzato un set di filtri di Gabor con 4 diverse angolazioni e 3 diverse scale per un totale di 12 filtri:
+
+\begin{figure}[H] 
+  \centering
+    \includegraphics[width=0.5\textwidth]{images/filterbank.png}
+    \caption{{\small \textit{Set di filtri di Gabor con 4 angolazioni e 3 scale}}}
+\end{figure}
+
+Per ciascun pixel dell'immagine viene dunque calcolato il vettore delle features ottenute mediante la convoluzione dell'immagine con i filtri di Gabor (dividendo la parte reale dalla parte immaginaria).
 
 
 \subsection{Covariance Descriptor}

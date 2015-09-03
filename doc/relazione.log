@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2014.4.22)  3 SEP 2015 17:37
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2014.4.22)  3 SEP 2015 18:40
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1004,10 +1004,44 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <5> on input line 7.
 )
-(./teoria.tex) (./dataset.tex) (./risultati.tex) (./implementazione.tex)
-(./conclusioni.tex) [2]
+(./teoria.tex
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 22.
+ (/usr/local/texlive/2013/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 22.
+
+[2] <images/gaborfilter.jpg, id=88, 562.1pt x 421.575pt>
+File: images/gaborfilter.jpg Graphic file (type jpg)
+
+<use images/gaborfilter.jpg>
+Package pdftex.def Info: images/gaborfilter.jpg used on input line 30.
+(pdftex.def)             Requested size: 213.39568pt x 160.04578pt.
+
+<images/filterbank.png, id=89, 462.72874pt x 364.36125pt>
+File: images/filterbank.png Graphic file (type png)
+
+<use images/filterbank.png>
+Package pdftex.def Info: images/filterbank.png used on input line 41.
+(pdftex.def)             Requested size: 213.39568pt x 168.03073pt.
+) (./dataset.tex) (./risultati.tex)
+(./implementazione.tex) (./conclusioni.tex) [3pdfTeX warning (ext4): destinatio
+n with the same identifier (name{figure.1}) has been already used, duplicate ig
+nored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.45 
+     pdfTeX warning (ext4): destination with the same identifier (name{figure.2
+}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.45 
+      <./images/gaborfilter.jpg> <./images/filterbank.png>]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 58.
- [3pdfTeX warning (ext4): destination with the same identifier (name{cite.}) ha
+ [4pdfTeX warning (ext4): destination with the same identifier (name{cite.}) ha
 s been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
@@ -1033,10 +1067,10 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 58.
  ) 
 Here is how much of TeX's memory you used:
- 8891 strings out of 493315
- 126990 string characters out of 6137904
- 232866 words of memory out of 5000000
- 12192 multiletter control sequences out of 15000+600000
+ 8932 strings out of 493315
+ 127669 string characters out of 6137904
+ 231866 words of memory out of 5000000
+ 12222 multiletter control sequences out of 15000+600000
  11109 words of font info for 38 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
  30i,8n,32p,910b,446s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1054,10 +1088,10 @@ ve/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive
 /2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2
 013/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/20
 13/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on relazione.pdf (3 pages, 163573 bytes).
+Output written on relazione.pdf (4 pages, 223057 bytes).
 PDF statistics:
- 146 PDF objects out of 1000 (max. 8388607)
- 125 compressed objects within 2 object streams
- 21 named destinations out of 1000 (max. 500000)
- 81 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 156 PDF objects out of 1000 (max. 8388607)
+ 131 compressed objects within 2 object streams
+ 24 named destinations out of 1000 (max. 500000)
+ 91 words of extra memory for PDF output out of 10000 (max. 10000000)
 
