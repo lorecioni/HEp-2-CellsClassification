@@ -16,7 +16,7 @@ function [outCov, isSPD] = Compute_Gabor_Cov_Features(img, GR, GI, mskBlock, th)
 
     covSamples = [];
 
-    covSamples = [covSamples; reshape(img,[1,SizeX * SizeY])];
+    covSamples = [covSamples; reshape(img,[1, SizeX * SizeY])];
 
     [posX,posY] = meshgrid(0:1/SizeX:1-1/SizeX,0:1/SizeY:1-1/SizeY);
     covSamples = [covSamples;reshape(posX,[1, SizeX * SizeY])];
@@ -31,5 +31,20 @@ function [outCov, isSPD] = Compute_Gabor_Cov_Features(img, GR, GI, mskBlock, th)
     p = find(temp3 <= 0);
     if ~isempty(p) %Not SPD
         isSPD = 0;
+    else 
+        outCov = map2IDS_vectorize(outCov);       
     end
+    
+end
+
+
+function y = map2IDS_vectorize(input)
+    input = logm(input);    
+    offDiagonals = tril(input, -1) * sqrt(2);
+    diagonals = diag(diag(input));
+    vecInMat = diagonals + offDiagonals; 
+    vecInds = tril(ones(size(input)));
+    map2ITS = vecInMat(:);
+    vecInds = vecInds(:);
+    y = map2ITS(vecInds == 1);
 end

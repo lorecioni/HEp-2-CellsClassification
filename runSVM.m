@@ -12,11 +12,11 @@ end
 
 % Using gaussian kernel
 t = templateSVM('KernelFunction','gaussian');
-kfolds = 12;
+%kfolds = 7;
 
 % Fit SVM model. Using matlab function for multiclass training
 model = fitcecoc(signatures', labels, 'Learners', t, ... 
-    'Prior', 'uniform', 'CrossVal', 'on', 'KFold', kfolds);
+    'Prior', 'uniform', 'CrossVal', 'on');
 
 % Predict labels on the model
 predictedLabels = kfoldPredict(model);
@@ -24,6 +24,7 @@ predictedLabels = kfoldPredict(model);
 % Generate confusion matrix
 [confusionMatrix, classes] = confusionmat(labels, predictedLabels');
 
+confusionMatrix
 % Evaluate results
 classFrequency = sum(confusionMatrix, 2);
 classCorrectedPred = diag(confusionMatrix);

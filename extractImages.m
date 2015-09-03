@@ -45,9 +45,9 @@ for image_id = 1:configuration.image_number
             %Considering only green level or rgb2gray(block)
             block = block(:, :, 2);
             
-            [fea, flag] = Compute_Gabor_Cov_Features(block, GR, GI, mskBlock, threshold);
+            [features, flag] = Compute_Gabor_Cov_Features(block, GR, GI, mskBlock, threshold);
             if flag == 1
-                cov_Sample.X(:, block_ind, counter) = map2IDS_vectorize(fea);                       
+                cov_Sample.X(:, block_ind, counter) = features;                       
                 block_ind = block_ind + 1;                              
             end
          end

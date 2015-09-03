@@ -18,7 +18,7 @@ start_time = clock;
 
 for i=1:image_number
     tempM = TrainSet.X(:,1:TrainSet.Nblocks(i),i);
-    signatures(:,i) = computeFisherTensors(tempM,GMModel);          
+    signatures(:,i) = computeFisherTensors(tempM, GMModel);          
     fprintf('Image processed: %d / %.2f %%', i, ...
         (i * 100/image_number));
     fprintf(' - Elapsed time: %.2f s\n', etime(clock, start_time));

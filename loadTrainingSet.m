@@ -1,4 +1,4 @@
-function loadTrainingSet ()
+ function loadTrainingSet ()
 %Load training set labels from CSV file and generate a mat file
 
     import configuration.*;

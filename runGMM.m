@@ -14,7 +14,7 @@ for i=1:size(TrainSet.X,3)
 	tempM = tempM(:,randN);
 	vectors = cat(2 , vectors, tempM);  
 end
-vectors = vectors(:,randperm(size(vectors,2)));
+vectors = vectors(:, randperm(size(vectors,2)));
 
 covType = 'diagonal'; 
 options = statset('Display', 'final','MaxIter', 500, 'TolFun', 1e-6);
