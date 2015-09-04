@@ -12,7 +12,7 @@ t = templateSVM('KernelFunction','gaussian');
 
 % Fit SVM model. Using matlab function for multiclass training
 model = fitcecoc(signatures', labels, 'Learners', t, ...
-    'Prior', 'uniform', 'CrossVal', 'on', 'KFold', 10);
+    'Prior', 'uniform', 'CrossVal', 'on', 'KFold', 8);
 
 % Predict labels on the model
 predictedLabels = kfoldPredict(model);
