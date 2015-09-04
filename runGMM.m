@@ -10,7 +10,7 @@ vectors  = [];
 
 for i=1:size(TrainSet.X,3)
     tempM = TrainSet.X(:,1:TrainSet.Nblocks(i),i);
-	randN = randperm(TrainSet.Nblocks(i), 80);
+	randN = randperm(TrainSet.Nblocks(i), 40);
 	tempM = tempM(:,randN);
 	vectors = cat(2 , vectors, tempM);  
 end

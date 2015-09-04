@@ -23,18 +23,19 @@ threshold = 0.1;
 
 start_time = clock;
 
-imagefiles = dir([configuration.image_path '*.' configuration.image_ext]);      
-image_number = length(imagefiles);    % Number of files found
-
-if(image_number > configuration.max_images)
-    image_number = configuration.max_images;
-end
+% Number of images found
+image_number = length(trainSet);    
 
 fprintf('Processing %d images\n\n', image_number);
 fprintf('Image processed: 0 / 0.00 %% - Elapsed Time: 0.00 s\n');
-
+ 
 for image_id = 1:image_number
-    filename = [configuration.image_path imagefiles(image_id).name];
+    filename = char(trainSet(image_id, 3));
+    
+    if(exist(filename, 'file') ~= 2)
+       fprintf('Image %s not found.', filename);
+       continue;      
+    end
     
     I = imread(filename);
     
