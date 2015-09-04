@@ -7,17 +7,17 @@ Matlab code implementing [Fisher tensors for classifying human epithelial cells]
 Before launching the program edit configuration file.
 
 - `image_path`  images folder path.
-- `image_number` number of images in path to be processed.
 - `image_file_prefix` images filename prefix.
 - `image_ext` images extension.
-- `classes` classification patterns.
 - `resize` true/false, resize images before processing (faster).
 - `resizeTo` resize dimension.
 - `K` values of K used in GMM.
 
 ###Running###
 
-Run the code as follows: 
+Prepare first your training set, running `loadTrainingSet`. This will you you a table containing image id, label and filename.
+
+Than run the code as follows: 
 
 - `extractImages` extracts Covariance Descriptor from each image in dataset.
 - `runGMM` execute GMM.
