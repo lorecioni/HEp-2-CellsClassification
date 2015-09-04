@@ -59,6 +59,15 @@ $$C = \frac{1}{n -1} \sum_{k = 1}^{n} (f_k - \mu)(f_k - \mu)^T$$
 
 con $\mu$ la media dei \emph{features points}.
 
-Poichè la matrice $C$ è definita positiva e simmetrica può essere considerata un \emph{tensore}. 
+Poichè la matrice $C$ è definita positiva e simmetrica può essere considerata un \emph{tensore}.
+
+\subsection{Gaussian Mixture Model}
+
+Un Modello Mistura di Gaussiane (\emph{Gaussian Mixture Model}) è una funzione parametrica di distribuzione di probabilità rappresentata come la somma pesata di Gaussiane.
+A Gaussian Mixture Model (GMM) is a parametric probability density function represented as a weighted sum of Gaussian
+component densities. GMMs are commonly used as a parametric model of the probability distribution of continuous measurements
+or features in a biometric system, such as vocal-tract related spectral features in a speaker recognition system. GMM
+parameters are estimated from training data using the iterative Expectation-Maximization (EM) algorithm or Maximum A
+Posteriori (MAP) estimation from a well-trained prior model. 
 
 \subsection{Fisher Tensors}

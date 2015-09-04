@@ -17,6 +17,6 @@ classdef configuration
        resizeTo = 1000;
        
        %GMM K
-       K = 16;
+       K = 8;
    end
 end
