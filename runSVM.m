@@ -17,10 +17,9 @@ model = fitcecoc(signatures', labels, 'Learners', t, ...
 % Predict labels on the model
 predictedLabels = kfoldPredict(model);
 
-% Generate confusion matrix
-[confusionMatrix, classes] = confusionmat(labels, predictedLabels');
+% Generate and plot confusion matrix
+[confusionMatrix, classes] = plotConfusionMatrix(labels, predictedLabels');
 
-confusionMatrix
 % Evaluate results
 classFrequency = sum(confusionMatrix, 2);
 classCorrectedPred = diag(confusionMatrix);
