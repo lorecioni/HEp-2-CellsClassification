@@ -3,9 +3,10 @@
 \contentsline {section}{\numberline {2}Teoria}{2}{section.2}
 \contentsline {subsection}{\numberline {2.1}Il filtro di Gabor}{2}{subsection.2.1}
 \contentsline {subsection}{\numberline {2.2}Descrittore di Covarianza}{4}{subsection.2.2}
-\contentsline {subsection}{\numberline {2.3}Fisher Tensors}{4}{subsection.2.3}
+\contentsline {subsection}{\numberline {2.3}Gaussian Mixture Model}{4}{subsection.2.3}
+\contentsline {subsection}{\numberline {2.4}Fisher Tensors}{4}{subsection.2.4}
 \contentsline {section}{\numberline {3}Dataset}{4}{section.3}
-\contentsline {section}{\numberline {4}Risultati}{4}{section.4}
-\contentsline {section}{\numberline {5}Implementazione}{4}{section.5}
-\contentsline {subsection}{\numberline {5.1}Esecuzione}{4}{subsection.5.1}
-\contentsline {section}{\numberline {6}Conclusioni}{4}{section.6}
+\contentsline {section}{\numberline {4}Risultati}{6}{section.4}
+\contentsline {section}{\numberline {5}Implementazione}{6}{section.5}
+\contentsline {subsection}{\numberline {5.1}Esecuzione}{6}{subsection.5.1}
+\contentsline {section}{\numberline {6}Conclusioni}{6}{section.6}
