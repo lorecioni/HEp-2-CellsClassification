@@ -28,8 +28,7 @@ function [outCov, isSPD] = Compute_Gabor_Cov_Features(img, GR, GI, mskBlock, th)
     outCov = cov(covSamples');
     outCov = outCov + eps * eye(size(outCov,1));
     temp3 = eig(outCov);
-    p = find(temp3 <= 0);
-    if ~isempty(p) %Not SPD
+    if ~isempty(find(temp3 <= 0, 1)) %Not SPD
         isSPD = 0;
     else 
         outCov = map2IDS_vectorize(outCov);       

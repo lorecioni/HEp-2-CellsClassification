@@ -56,8 +56,6 @@ for image_id = 1:image_number
             %Considering only green level or rgb2gray(block)
             block = block(:, :, 2);
             
-            %Features vector {[(num_theta * num_scale) + 3] * [(num_theta *
-            %num_scale) + 2]}/2
             [features, flag] = Compute_Gabor_Cov_Features(block, GR, GI, mskBlock, threshold);
             if flag == 1
                 cov_Sample.X(:, block_ind, counter) = features;                       
