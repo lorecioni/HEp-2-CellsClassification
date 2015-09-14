@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2014.4.22)  14 SEP 2015 12:36
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2014.4.22)  14 SEP 2015 13:13
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1026,76 +1026,90 @@ Package pdftex.def Info: images/filterbank.png used on input line 41.
 <images/block.png, id=123, 81.30376pt x 79.79813pt>
 File: images/block.png Graphic file (type png)
  <use images/block.png>
-Package pdftex.def Info: images/block.png used on input line 25.
+Package pdftex.def Info: images/block.png used on input line 28.
 (pdftex.def)             Requested size: 46.3833pt x 45.52458pt.
 
 <images/mask.png, id=124, 80.3pt x 79.29625pt>
 File: images/mask.png Graphic file (type png)
  <use images/mask.png>
-Package pdftex.def Info: images/mask.png used on input line 30.
+Package pdftex.def Info: images/mask.png used on input line 33.
 (pdftex.def)             Requested size: 51.86476pt x 51.21504pt.
-)
-(./dataset.tex <images/example.jpg, id=125, 803.0pt x 464.73625pt>
-File: images/example.jpg Graphic file (type jpg)
 
-<use images/example.jpg>
+<images/tangent_space.png, id=125, 376.40625pt x 213.79875pt>
+File: images/tangent_space.png Graphic file (type png)
+
+<use images/tangent_space.png>
+Package pdftex.def Info: images/tangent_space.png used on input line 60.
+(pdftex.def)             Requested size: 213.39568pt x 121.21082pt.
+
+Underfull \hbox (badness 1661) in paragraph at lines 61--61
+[]\OT1/cmr/m/n/12 Figura 4: |\OT1/cmr/m/it/12 Il-lu-stra-zio-ne del-lo spa-zio 
+tan-gen-te $\OML/cmm/m/it/12 T[]$ \OT1/cmr/m/it/12 al pun-to $\OML/cmm/m/it/12 
+P$ \OT1/cmr/m/it/12 sul-la va-riet^^Ra
+ []
+
+[5 <./images/block.png> <./images/mask.png>]) (./dataset.tex
+<images/example.jpg, id=137, 803.0pt x 464.73625pt>
+File: images/example.jpg Graphic file (type jpg)
+ <use images/example.jpg>
 Package pdftex.def Info: images/example.jpg used on input line 11.
 (pdftex.def)             Requested size: 384.1096pt x 222.305pt.
- [5 <./images/block.png> <./images/mask.png>]
-<images/omogeneo.jpg, id=136, 105.39375pt x 140.525pt>
+
+[6 <./images/tangent_space.png>]
+<images/omogeneo.jpg, id=144, 105.39375pt x 140.525pt>
 File: images/omogeneo.jpg Graphic file (type jpg)
 
 <use images/omogeneo.jpg>
 Package pdftex.def Info: images/omogeneo.jpg used on input line 21.
 (pdftex.def)             Requested size: 34.14319pt x 45.52458pt.
 
-<images/nucleolare.jpg, id=137, 105.39375pt x 140.525pt>
+<images/nucleolare.jpg, id=145, 105.39375pt x 140.525pt>
 File: images/nucleolare.jpg Graphic file (type jpg)
 
 <use images/nucleolare.jpg>
 Package pdftex.def Info: images/nucleolare.jpg used on input line 26.
 (pdftex.def)             Requested size: 38.4113pt x 51.21504pt.
 
-<images/punteggiato.jpg, id=138, 105.39375pt x 140.525pt>
+<images/punteggiato.jpg, id=146, 105.39375pt x 140.525pt>
 File: images/punteggiato.jpg Graphic file (type jpg)
 
 <use images/punteggiato.jpg>
 Package pdftex.def Info: images/punteggiato.jpg used on input line 31.
 (pdftex.def)             Requested size: 38.4113pt x 51.21504pt.
 
-<images/granulare.jpg, id=139, 105.39375pt x 140.525pt>
+<images/granulare.jpg, id=147, 105.39375pt x 140.525pt>
 File: images/granulare.jpg Graphic file (type jpg)
 
 <use images/granulare.jpg>
 Package pdftex.def Info: images/granulare.jpg used on input line 36.
 (pdftex.def)             Requested size: 38.4113pt x 51.21504pt.
 
-<images/citoplasmico.jpg, id=140, 105.39375pt x 140.525pt>
+<images/citoplasmico.jpg, id=148, 105.39375pt x 140.525pt>
 File: images/citoplasmico.jpg Graphic file (type jpg)
 
 <use images/citoplasmico.jpg>
 Package pdftex.def Info: images/citoplasmico.jpg used on input line 41.
 (pdftex.def)             Requested size: 38.4113pt x 51.21504pt.
 
-<images/negativo.jpg, id=141, 105.39375pt x 140.525pt>
+<images/negativo.jpg, id=149, 105.39375pt x 140.525pt>
 File: images/negativo.jpg Graphic file (type jpg)
 
 <use images/negativo.jpg>
 Package pdftex.def Info: images/negativo.jpg used on input line 46.
 (pdftex.def)             Requested size: 38.4113pt x 51.21504pt.
-) (./risultati.tex [6 <./images/example.jpg> <./images/omogeneo.jpg> <./images/
+) (./risultati.tex [7 <./images/example.jpg> <./images/omogeneo.jpg> <./images/
 nucleolare.jpg> <./images/punteggiato.jpg> <./images/granulare.jpg> <./images/c
 itoplasmico.jpg> <./images/negativo.jpg>]
-<images/confusion_matrix.png, id=148, 634.37pt x 433.62pt>
+<images/confusion_matrix.png, id=157, 634.37pt x 433.62pt>
 File: images/confusion_matrix.png Graphic file (type png)
 
 <use images/confusion_matrix.png>
 Package pdftex.def Info: images/confusion_matrix.png used on input line 36.
 (pdftex.def)             Requested size: 384.1096pt x 262.56256pt.
 ) (./implementazione.tex) (./conclusioni.tex)
-[7 <./images/confusion_matrix.png>]
+[8 <./images/confusion_matrix.png>]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 60.
- [8pdfTeX warning (ext4): destination with the same identifier (name{cite.}) ha
+ [9pdfTeX warning (ext4): destination with the same identifier (name{cite.}) ha
 s been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
@@ -1121,13 +1135,13 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 60.
  ) 
 Here is how much of TeX's memory you used:
- 9523 strings out of 493315
- 141415 string characters out of 6137904
- 241110 words of memory out of 5000000
- 12791 multiletter control sequences out of 15000+600000
+ 9531 strings out of 493315
+ 141576 string characters out of 6137904
+ 242110 words of memory out of 5000000
+ 12795 multiletter control sequences out of 15000+600000
  11776 words of font info for 40 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 42i,8n,40p,713b,451s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 42i,8n,40p,713b,449s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 ></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
 </usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb
@@ -1145,10 +1159,10 @@ e/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive
 013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/201
 3/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2013
 /texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on relazione.pdf (8 pages, 443816 bytes).
+Output written on relazione.pdf (9 pages, 551934 bytes).
 PDF statistics:
- 230 PDF objects out of 1000 (max. 8388607)
- 185 compressed objects within 2 object streams
- 41 named destinations out of 1000 (max. 500000)
- 165 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 239 PDF objects out of 1000 (max. 8388607)
+ 191 compressed objects within 2 object streams
+ 44 named destinations out of 1000 (max. 500000)
+ 170 words of extra memory for PDF output out of 10000 (max. 10000000)
 
