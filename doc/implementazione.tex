@@ -28,3 +28,18 @@ Il file \textbf{configuration.m} contiene al suo interno le configurazioni di ba
 \end{itemize}
 
 \subsection{Esecuzione}
+
+L'algoritmo, come descritto nella Sezione 3 è stato suddiviso in 5 fasi fondamentali, da eseguire in ordine.
+
+\begin{enumerate}
+\item \textbf{loadTrainingSet.m}: si occupa della creazione del \emph{training set}. Legge il file CSV e va a creare una struttura contenente:
+\begin{itemize}
+\item ID dell'immagine.
+\item \emph{Label} assegnata.
+\item Nome completo del file e cartella.
+\end{itemize}
+\item \textbf{extractImages.m}: esegue quanto descritto nella Sezione 3.1. 
+\item \textbf{runGMM.m}: esegue quanto descritto nella Sezione 3.2.
+\item \textbf{saveSignatures.m}: calcola i tensori di Fisher nel modo descritto nella Sezione 3.3.
+\item \textbf{runSVM.m}: esegue la classificazione. Viene stampata la tabella dei risultati ottenuti e mostrata una versione grafica della matrice di confusione (generata tramite la funzione \textbf{plotConfusionMatrix.m}).
+\end{enumerate}
