@@ -65,3 +65,33 @@ Il vettore tangente $\Delta$ può essere ottenuto mediante mappa logaritmica, $\
 
 \subsection{Creazione di un modello a mistura di gaussiane}
 
+A partire dalle \emph{features} estratte in precedenza si procede ora alla creazione di un modello a mistura di gaussiane. Viene fissato un valore di $K$, nel nostro caso 16, un valore di \emph{tolleranza} e un un numero massimo di \emph{iterazioni}.
+
+Il modello così creato verrà utilizzato per il calcolo dei tensori di Fisher.
+
+\subsection{Calcolo dei \emph{tensori di Fisher}}
+
+Per ciascuna immagine vengono ora calcolati i \emph{tensori di Fisher}. Dati in ingresso:
+\begin{itemize}
+\item $\mathbf{Q} = \{ Q_t \}_{t = 1}^{p}$ descrittori di covarianza estratti da una immagine ($p$ numero di blocchi).
+\item $\lambda_i = \{\omega_i, \mu_i, \Sigma_i\}$, componenti della mistura di gaussiane, con $i = 1, \ldots, K$
+\end{itemize}
+
+Sia $p(x| \lambda)$ una distribuzione di probabilità modellata da una GMM con K gaussiane
+
+$$p(x | \lambda) = \sum_{i = 1}^{K} \omega_i g(x | \mu_i, \mathcal{\sum}_i)$$
+
+\begin{algorithm}[H]
+\caption{Tensore di Fisher di $\mathbf{Q}$}
+\begin{algorithmic}
+\State - Calcolo della rappresentazione logaritmica euclidea di $\mathbf{Q}$, $q_t = Vec(\log(\mathbf{Q}))$
+\State - $\gamma_i(q_t) = \frac{\omega_i g(q_t | \mu_i, \sum_i)}{\sum_{j=1}^{K} \omega_j g(q_t | \mu_j , \sum_j)}$
+\For {$i = 1, \ldots, K$}
+\State $\mathcal{G}_i = \frac{1}{p\sqrt{\omega_i}} \sum_{t = 1}^{p} \gamma_i(q_t) \sigma_{i}^{-1} (q_t - \mu_i) $ con $\sum_i = \sigma_{i}^{2}$
+\EndFor
+\State - $FT(\mathbf{Q}) = [\mathcal{G}_{1}^T, \ldots, \mathcal{G}_{K}^T]$
+\end{algorithmic}
+\end{algorithm}
+
+\subsection{Classificazione}
+

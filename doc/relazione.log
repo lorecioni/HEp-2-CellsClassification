@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2014.4.22)  14 SEP 2015 13:13
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2014.4.22)  14 SEP 2015 14:23
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -838,7 +838,36 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \@float@everytoks=\toks25
 \@floatcapt=\box31
 )
-(/usr/local/texlive/2013/texmf-dist/tex/latex/caption/subcaption.sty
+(/usr/local/texlive/2013/texmf-dist/tex/latex/algorithms/algorithm.sty
+Package: algorithm 2009/08/24 v0.1 Document Style `algorithm' - floating enviro
+nment
+
+(/usr/local/texlive/2013/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
+)
+\@float@every@algorithm=\toks26
+\c@algorithm=\count113
+)
+(/usr/local/texlive/2013/texmf-dist/tex/latex/algorithmicx/algpseudocode.sty
+Package: algpseudocode 
+
+(/usr/local/texlive/2013/texmf-dist/tex/latex/algorithmicx/algorithmicx.sty
+Package: algorithmicx 2005/04/27 v1.2 Algorithmicx
+
+Document Style algorithmicx 1.2 - a greatly improved `algorithmic' style
+\c@ALG@line=\count114
+\c@ALG@rem=\count115
+\c@ALG@nested=\count116
+\ALG@tlm=\skip47
+\ALG@thistlm=\skip48
+\c@ALG@Lnr=\count117
+\c@ALG@blocknr=\count118
+\c@ALG@storecount=\count119
+\c@ALG@tmpcounter=\count120
+\ALG@tmplength=\skip49
+)
+Document Style - pseudocode environments for use with the `algorithmicx' style
+) (/usr/local/texlive/2013/texmf-dist/tex/latex/caption/subcaption.sty
 Package: subcaption 2013/02/03 v1.1-62 Sub-captions (AR)
 
 (/usr/local/texlive/2013/texmf-dist/tex/latex/caption/caption.sty
@@ -855,14 +884,14 @@ Package caption3 Info: TeX engine: e-TeX on input line 57.
 \caption@parindent=\dimen132
 \caption@hangindent=\dimen133
 )
-\c@ContinuedFloat=\count113
+\c@ContinuedFloat=\count121
 Package caption Info: float package is loaded.
 Package caption Info: hyperref package is loaded.
 Package caption Info: listings package is loaded.
 Package caption Info: wrapfig package is loaded.
 )
-\c@subfigure=\count114
-\c@subtable=\count115
+\c@subfigure=\count122
+\c@subtable=\count123
 )
 (./relazione.aux
 
@@ -874,40 +903,40 @@ LaTeX Warning: Label `' multiply defined.
 )
 \openout1 = `relazione.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for LGR/cmr/m/n on input line 22.
-LaTeX Font Info:    Try loading font information for LGR+cmr on input line 22.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for LGR/cmr/m/n on input line 25.
+LaTeX Font Info:    Try loading font information for LGR+cmr on input line 25.
  (/usr/local/texlive/2013/texmf-dist/tex/generic/babel-greek/lgrcmr.fd
 File: lgrcmr.fd 2008/06/17 v2.3 Greek Computer Modern
 )
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
 
 (/usr/local/texlive/2013/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count116
+\scratchcounter=\count124
 \scratchdimen=\dimen134
 \scratchbox=\box32
-\nofMPsegments=\count117
-\nofMParguments=\count118
-\everyMPshowfont=\toks26
-\MPscratchCnt=\count119
+\nofMPsegments=\count125
+\nofMParguments=\count126
+\everyMPshowfont=\toks27
+\MPscratchCnt=\count127
 \MPscratchDim=\dimen135
-\MPnumerator=\count120
-\makeMPintoPDFobject=\count121
-\everyMPtoPDFconversion=\toks27
+\MPnumerator=\count128
+\makeMPintoPDFobject=\count129
+\everyMPtoPDFconversion=\toks28
 ) (/usr/local/texlive/2013/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
 
@@ -923,7 +952,7 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-\c@lstlisting=\count122
+\c@lstlisting=\count130
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -960,18 +989,18 @@ e
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 \AtBeginShipoutBox=\box33
-Package hyperref Info: Link coloring OFF on input line 22.
+Package hyperref Info: Link coloring OFF on input line 25.
 (/usr/local/texlive/2013/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 
 (/usr/local/texlive/2013/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
-\c@section@level=\count123
+\c@section@level=\count131
 )
-LaTeX Info: Redefining \ref on input line 22.
-LaTeX Info: Redefining \pageref on input line 22.
-LaTeX Info: Redefining \nameref on input line 22.
+LaTeX Info: Redefining \ref on input line 25.
+LaTeX Info: Redefining \pageref on input line 25.
+LaTeX Info: Redefining \nameref on input line 25.
 
 (./relazione.out) (./relazione.out)
 \@outlinefile=\write3
@@ -980,9 +1009,9 @@ LaTeX Info: Redefining \nameref on input line 22.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <14.4> on input line 24.
+(Font)              <14.4> on input line 27.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 24.
+(Font)              <7> on input line 27.
  (./relazione.toc
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <12> on input line 4.
@@ -1008,14 +1037,14 @@ File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 22.
-<images/gaborfilter.jpg, id=102, 562.1pt x 421.575pt>
+<images/gaborfilter.jpg, id=112, 562.1pt x 421.575pt>
 File: images/gaborfilter.jpg Graphic file (type jpg)
 
 <use images/gaborfilter.jpg>
 Package pdftex.def Info: images/gaborfilter.jpg used on input line 30.
 (pdftex.def)             Requested size: 213.39568pt x 160.04578pt.
 
-<images/filterbank.png, id=103, 462.72874pt x 364.36125pt>
+<images/filterbank.png, id=113, 462.72874pt x 364.36125pt>
 File: images/filterbank.png Graphic file (type png)
 
 <use images/filterbank.png>
@@ -1023,19 +1052,19 @@ Package pdftex.def Info: images/filterbank.png used on input line 41.
 (pdftex.def)             Requested size: 213.39568pt x 168.03073pt.
  [3 <./images/gaborfilter.jpg> <./images/filterbank.png>]) (./algoritmo.tex [4]
 
-<images/block.png, id=123, 81.30376pt x 79.79813pt>
+<images/block.png, id=133, 81.30376pt x 79.79813pt>
 File: images/block.png Graphic file (type png)
  <use images/block.png>
 Package pdftex.def Info: images/block.png used on input line 28.
 (pdftex.def)             Requested size: 46.3833pt x 45.52458pt.
 
-<images/mask.png, id=124, 80.3pt x 79.29625pt>
+<images/mask.png, id=134, 80.3pt x 79.29625pt>
 File: images/mask.png Graphic file (type png)
  <use images/mask.png>
 Package pdftex.def Info: images/mask.png used on input line 33.
 (pdftex.def)             Requested size: 51.86476pt x 51.21504pt.
 
-<images/tangent_space.png, id=125, 376.40625pt x 213.79875pt>
+<images/tangent_space.png, id=135, 376.40625pt x 213.79875pt>
 File: images/tangent_space.png Graphic file (type png)
 
 <use images/tangent_space.png>
@@ -1048,98 +1077,101 @@ tan-gen-te $\OML/cmm/m/it/12 T[]$ \OT1/cmr/m/it/12 al pun-to $\OML/cmm/m/it/12
 P$ \OT1/cmr/m/it/12 sul-la va-riet^^Ra
  []
 
-[5 <./images/block.png> <./images/mask.png>]) (./dataset.tex
-<images/example.jpg, id=137, 803.0pt x 464.73625pt>
+[5 <./images/block.png> <./images/mask.png>]
+Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
+put line 86.
+) (./dataset.tex [6 <./images/tangent_space.png>] <images/example.jpg, id=153, 
+803.0pt x 464.73625pt>
 File: images/example.jpg Graphic file (type jpg)
- <use images/example.jpg>
+
+<use images/example.jpg>
 Package pdftex.def Info: images/example.jpg used on input line 11.
 (pdftex.def)             Requested size: 384.1096pt x 222.305pt.
 
-[6 <./images/tangent_space.png>]
-<images/omogeneo.jpg, id=144, 105.39375pt x 140.525pt>
+<images/omogeneo.jpg, id=154, 105.39375pt x 140.525pt>
 File: images/omogeneo.jpg Graphic file (type jpg)
 
 <use images/omogeneo.jpg>
 Package pdftex.def Info: images/omogeneo.jpg used on input line 21.
 (pdftex.def)             Requested size: 34.14319pt x 45.52458pt.
 
-<images/nucleolare.jpg, id=145, 105.39375pt x 140.525pt>
+<images/nucleolare.jpg, id=155, 105.39375pt x 140.525pt>
 File: images/nucleolare.jpg Graphic file (type jpg)
 
 <use images/nucleolare.jpg>
 Package pdftex.def Info: images/nucleolare.jpg used on input line 26.
 (pdftex.def)             Requested size: 38.4113pt x 51.21504pt.
 
-<images/punteggiato.jpg, id=146, 105.39375pt x 140.525pt>
+<images/punteggiato.jpg, id=156, 105.39375pt x 140.525pt>
 File: images/punteggiato.jpg Graphic file (type jpg)
 
 <use images/punteggiato.jpg>
 Package pdftex.def Info: images/punteggiato.jpg used on input line 31.
 (pdftex.def)             Requested size: 38.4113pt x 51.21504pt.
 
-<images/granulare.jpg, id=147, 105.39375pt x 140.525pt>
+<images/granulare.jpg, id=157, 105.39375pt x 140.525pt>
 File: images/granulare.jpg Graphic file (type jpg)
 
 <use images/granulare.jpg>
 Package pdftex.def Info: images/granulare.jpg used on input line 36.
 (pdftex.def)             Requested size: 38.4113pt x 51.21504pt.
 
-<images/citoplasmico.jpg, id=148, 105.39375pt x 140.525pt>
+<images/citoplasmico.jpg, id=158, 105.39375pt x 140.525pt>
 File: images/citoplasmico.jpg Graphic file (type jpg)
 
 <use images/citoplasmico.jpg>
 Package pdftex.def Info: images/citoplasmico.jpg used on input line 41.
 (pdftex.def)             Requested size: 38.4113pt x 51.21504pt.
 
-<images/negativo.jpg, id=149, 105.39375pt x 140.525pt>
+<images/negativo.jpg, id=159, 105.39375pt x 140.525pt>
 File: images/negativo.jpg Graphic file (type jpg)
 
 <use images/negativo.jpg>
 Package pdftex.def Info: images/negativo.jpg used on input line 46.
 (pdftex.def)             Requested size: 38.4113pt x 51.21504pt.
-) (./risultati.tex [7 <./images/example.jpg> <./images/omogeneo.jpg> <./images/
-nucleolare.jpg> <./images/punteggiato.jpg> <./images/granulare.jpg> <./images/c
-itoplasmico.jpg> <./images/negativo.jpg>]
-<images/confusion_matrix.png, id=157, 634.37pt x 433.62pt>
+) (./risultati.tex [7 <./images/example.jpg>]
+<images/confusion_matrix.png, id=168, 634.37pt x 433.62pt>
 File: images/confusion_matrix.png Graphic file (type png)
 
 <use images/confusion_matrix.png>
 Package pdftex.def Info: images/confusion_matrix.png used on input line 36.
 (pdftex.def)             Requested size: 384.1096pt x 262.56256pt.
+ [8 <./images/omogeneo.jpg> <./images/nucleolare.jpg> <./images/punteggiato.jpg
+> <./images/granulare.jpg> <./images/citoplasmico.jpg> <./images/negativo.jpg>]
 ) (./implementazione.tex) (./conclusioni.tex)
-[8 <./images/confusion_matrix.png>]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 60.
- [9pdfTeX warning (ext4): destination with the same identifier (name{cite.}) ha
-s been already used, duplicate ignored
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 63.
+
+[9pdfTeX warning (ext4): destination with the same identifier (name{cite.}) has
+ been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.60 \end{document}
+l.63 \end{document}
                    pdfTeX warning (ext4): destination with the same identifier 
 (name{cite.}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.60 \end{document}
-                   ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 60.
+l.63 \end{document}
+                    <./images/confusion_matrix.png>]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 63.
  (./relazione.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 60.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 60.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 63.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 63.
 Package rerunfilecheck Info: File `relazione.out' has not changed.
-(rerunfilecheck)             Checksum: E8027864A737A4DD312ACEFE5887F70E;739.
+(rerunfilecheck)             Checksum: D87CC1E84D4F62323828805828A44371;914.
 
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 60.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 63.
  ) 
 Here is how much of TeX's memory you used:
- 9531 strings out of 493315
- 141576 string characters out of 6137904
- 242110 words of memory out of 5000000
- 12795 multiletter control sequences out of 15000+600000
- 11776 words of font info for 40 fonts, out of 8000000 for 9000
+ 10106 strings out of 493315
+ 149895 string characters out of 6137904
+ 251683 words of memory out of 5000000
+ 13349 multiletter control sequences out of 15000+600000
+ 13016 words of font info for 44 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
  42i,8n,40p,713b,449s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
@@ -1159,10 +1191,10 @@ e/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive
 013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/201
 3/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2013
 /texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on relazione.pdf (9 pages, 551934 bytes).
+Output written on relazione.pdf (9 pages, 562051 bytes).
 PDF statistics:
- 239 PDF objects out of 1000 (max. 8388607)
- 191 compressed objects within 2 object streams
- 44 named destinations out of 1000 (max. 500000)
- 170 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 251 PDF objects out of 1000 (max. 8388607)
+ 202 compressed objects within 3 object streams
+ 47 named destinations out of 1000 (max. 500000)
+ 186 words of extra memory for PDF output out of 10000 (max. 10000000)
 
