@@ -95,3 +95,8 @@ $$p(x | \lambda) = \sum_{i = 1}^{K} \omega_i g(x | \mu_i, \mathcal{\sum}_i)$$
 
 \subsection{Classificazione}
 
+Infine si procede con la classificazione, affidata al classificatore SVM. 
+
+Viene creato il modello multiclasse con cross-validazione basato su kernel gaussiano, suddividendo il dataset in 8 parti uguali. 
+
+Il modello viene poi valutato andando a predire l'intero dataset.

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2014.4.22)  14 SEP 2015 14:23
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2014.4.22)  14 SEP 2015 14:30
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1037,14 +1037,14 @@ File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 22.
-<images/gaborfilter.jpg, id=112, 562.1pt x 421.575pt>
+<images/gaborfilter.jpg, id=113, 562.1pt x 421.575pt>
 File: images/gaborfilter.jpg Graphic file (type jpg)
 
 <use images/gaborfilter.jpg>
 Package pdftex.def Info: images/gaborfilter.jpg used on input line 30.
 (pdftex.def)             Requested size: 213.39568pt x 160.04578pt.
 
-<images/filterbank.png, id=113, 462.72874pt x 364.36125pt>
+<images/filterbank.png, id=114, 462.72874pt x 364.36125pt>
 File: images/filterbank.png Graphic file (type png)
 
 <use images/filterbank.png>
@@ -1052,19 +1052,19 @@ Package pdftex.def Info: images/filterbank.png used on input line 41.
 (pdftex.def)             Requested size: 213.39568pt x 168.03073pt.
  [3 <./images/gaborfilter.jpg> <./images/filterbank.png>]) (./algoritmo.tex [4]
 
-<images/block.png, id=133, 81.30376pt x 79.79813pt>
+<images/block.png, id=136, 81.30376pt x 79.79813pt>
 File: images/block.png Graphic file (type png)
  <use images/block.png>
 Package pdftex.def Info: images/block.png used on input line 28.
 (pdftex.def)             Requested size: 46.3833pt x 45.52458pt.
 
-<images/mask.png, id=134, 80.3pt x 79.29625pt>
+<images/mask.png, id=137, 80.3pt x 79.29625pt>
 File: images/mask.png Graphic file (type png)
  <use images/mask.png>
 Package pdftex.def Info: images/mask.png used on input line 33.
 (pdftex.def)             Requested size: 51.86476pt x 51.21504pt.
-
-<images/tangent_space.png, id=135, 376.40625pt x 213.79875pt>
+ [5 <./images/block.png> <./images/mask.png>]
+<images/tangent_space.png, id=151, 376.40625pt x 213.79875pt>
 File: images/tangent_space.png Graphic file (type png)
 
 <use images/tangent_space.png>
@@ -1077,72 +1077,70 @@ tan-gen-te $\OML/cmm/m/it/12 T[]$ \OT1/cmr/m/it/12 al pun-to $\OML/cmm/m/it/12
 P$ \OT1/cmr/m/it/12 sul-la va-riet^^Ra
  []
 
-[5 <./images/block.png> <./images/mask.png>]
 Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
-put line 86.
-) (./dataset.tex [6 <./images/tangent_space.png>] <images/example.jpg, id=153, 
-803.0pt x 464.73625pt>
+put line 85.
+[6 <./images/tangent_space.png>]) (./dataset.tex
+<images/example.jpg, id=159, 803.0pt x 464.73625pt>
 File: images/example.jpg Graphic file (type jpg)
-
-<use images/example.jpg>
+ <use images/example.jpg>
 Package pdftex.def Info: images/example.jpg used on input line 11.
 (pdftex.def)             Requested size: 384.1096pt x 222.305pt.
 
-<images/omogeneo.jpg, id=154, 105.39375pt x 140.525pt>
+[7] <images/omogeneo.jpg, id=166, 105.39375pt x 140.525pt>
 File: images/omogeneo.jpg Graphic file (type jpg)
 
 <use images/omogeneo.jpg>
 Package pdftex.def Info: images/omogeneo.jpg used on input line 21.
 (pdftex.def)             Requested size: 34.14319pt x 45.52458pt.
 
-<images/nucleolare.jpg, id=155, 105.39375pt x 140.525pt>
+<images/nucleolare.jpg, id=167, 105.39375pt x 140.525pt>
 File: images/nucleolare.jpg Graphic file (type jpg)
 
 <use images/nucleolare.jpg>
 Package pdftex.def Info: images/nucleolare.jpg used on input line 26.
 (pdftex.def)             Requested size: 38.4113pt x 51.21504pt.
 
-<images/punteggiato.jpg, id=156, 105.39375pt x 140.525pt>
+<images/punteggiato.jpg, id=168, 105.39375pt x 140.525pt>
 File: images/punteggiato.jpg Graphic file (type jpg)
 
 <use images/punteggiato.jpg>
 Package pdftex.def Info: images/punteggiato.jpg used on input line 31.
 (pdftex.def)             Requested size: 38.4113pt x 51.21504pt.
 
-<images/granulare.jpg, id=157, 105.39375pt x 140.525pt>
+<images/granulare.jpg, id=169, 105.39375pt x 140.525pt>
 File: images/granulare.jpg Graphic file (type jpg)
 
 <use images/granulare.jpg>
 Package pdftex.def Info: images/granulare.jpg used on input line 36.
 (pdftex.def)             Requested size: 38.4113pt x 51.21504pt.
 
-<images/citoplasmico.jpg, id=158, 105.39375pt x 140.525pt>
+<images/citoplasmico.jpg, id=170, 105.39375pt x 140.525pt>
 File: images/citoplasmico.jpg Graphic file (type jpg)
 
 <use images/citoplasmico.jpg>
 Package pdftex.def Info: images/citoplasmico.jpg used on input line 41.
 (pdftex.def)             Requested size: 38.4113pt x 51.21504pt.
 
-<images/negativo.jpg, id=159, 105.39375pt x 140.525pt>
+<images/negativo.jpg, id=171, 105.39375pt x 140.525pt>
 File: images/negativo.jpg Graphic file (type jpg)
 
 <use images/negativo.jpg>
 Package pdftex.def Info: images/negativo.jpg used on input line 46.
 (pdftex.def)             Requested size: 38.4113pt x 51.21504pt.
-) (./risultati.tex [7 <./images/example.jpg>]
-<images/confusion_matrix.png, id=168, 634.37pt x 433.62pt>
+) (./risultati.tex [8 <./images/example.jpg> <./images/omogeneo.jpg> <./images/
+nucleolare.jpg> <./images/punteggiato.jpg> <./images/granulare.jpg> <./images/c
+itoplasmico.jpg> <./images/negativo.jpg>]
+<images/confusion_matrix.png, id=178, 634.37pt x 433.62pt>
 File: images/confusion_matrix.png Graphic file (type png)
 
 <use images/confusion_matrix.png>
 Package pdftex.def Info: images/confusion_matrix.png used on input line 36.
 (pdftex.def)             Requested size: 384.1096pt x 262.56256pt.
- [8 <./images/omogeneo.jpg> <./images/nucleolare.jpg> <./images/punteggiato.jpg
-> <./images/granulare.jpg> <./images/citoplasmico.jpg> <./images/negativo.jpg>]
 ) (./implementazione.tex) (./conclusioni.tex)
+[9 <./images/confusion_matrix.png>]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 63.
-
-[9pdfTeX warning (ext4): destination with the same identifier (name{cite.}) has
- been already used, duplicate ignored
+ [10pdfTeX warning (ext4): destination with the same identifier (name{cite.}) h
+as been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
@@ -1153,13 +1151,13 @@ l.63 \end{document}
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.63 \end{document}
-                    <./images/confusion_matrix.png>]
+                   ]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 63.
  (./relazione.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 63.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 63.
 Package rerunfilecheck Info: File `relazione.out' has not changed.
-(rerunfilecheck)             Checksum: D87CC1E84D4F62323828805828A44371;914.
+(rerunfilecheck)             Checksum: 0A2C980EDAE9A4EE93DF9054CB3BFE1E;979.
 
 
 LaTeX Warning: There were multiply-defined labels.
@@ -1167,10 +1165,10 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 63.
  ) 
 Here is how much of TeX's memory you used:
- 10106 strings out of 493315
- 149895 string characters out of 6137904
- 251683 words of memory out of 5000000
- 13349 multiletter control sequences out of 15000+600000
+ 10109 strings out of 493315
+ 149932 string characters out of 6137904
+ 250683 words of memory out of 5000000
+ 13350 multiletter control sequences out of 15000+600000
  13016 words of font info for 44 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
  42i,8n,40p,713b,449s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1191,10 +1189,10 @@ e/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive
 013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/201
 3/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2013
 /texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on relazione.pdf (9 pages, 562051 bytes).
+Output written on relazione.pdf (10 pages, 562772 bytes).
 PDF statistics:
- 251 PDF objects out of 1000 (max. 8388607)
- 202 compressed objects within 3 object streams
- 47 named destinations out of 1000 (max. 500000)
- 186 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 261 PDF objects out of 1000 (max. 8388607)
+ 211 compressed objects within 3 object streams
+ 49 named destinations out of 1000 (max. 500000)
+ 194 words of extra memory for PDF output out of 10000 (max. 10000000)
 

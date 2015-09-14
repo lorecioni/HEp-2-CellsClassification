@@ -8,8 +8,9 @@
 \BOOKMARK [2][-]{subsection.3.1}{Estrazione delle features}{section.3}% 8
 \BOOKMARK [2][-]{subsection.3.2}{Creazione di un modello a mistura di gaussiane}{section.3}% 9
 \BOOKMARK [2][-]{subsection.3.3}{Calcolo dei tensori di Fisher}{section.3}% 10
-\BOOKMARK [1][-]{section.4}{Dataset}{}% 11
-\BOOKMARK [1][-]{section.5}{Risultati}{}% 12
-\BOOKMARK [1][-]{section.6}{Implementazione}{}% 13
-\BOOKMARK [2][-]{subsection.6.1}{Esecuzione}{section.6}% 14
-\BOOKMARK [1][-]{section.7}{Conclusioni}{}% 15
+\BOOKMARK [2][-]{subsection.3.4}{Classificazione}{section.3}% 11
+\BOOKMARK [1][-]{section.4}{Dataset}{}% 12
+\BOOKMARK [1][-]{section.5}{Risultati}{}% 13
+\BOOKMARK [1][-]{section.6}{Implementazione}{}% 14
+\BOOKMARK [2][-]{subsection.6.1}{Esecuzione}{section.6}% 15
+\BOOKMARK [1][-]{section.7}{Conclusioni}{}% 16
