@@ -13,5 +13,6 @@
 \contentsline {section}{\numberline {4}Dataset}{7}{section.4}
 \contentsline {section}{\numberline {5}Risultati}{8}{section.5}
 \contentsline {section}{\numberline {6}Implementazione}{10}{section.6}
-\contentsline {subsection}{\numberline {6.1}Esecuzione}{10}{subsection.6.1}
+\contentsline {subsection}{\numberline {6.1}Configurazioni iniziali}{10}{subsection.6.1}
+\contentsline {subsection}{\numberline {6.2}Esecuzione}{10}{subsection.6.2}
 \contentsline {section}{\numberline {7}Conclusioni}{10}{section.7}

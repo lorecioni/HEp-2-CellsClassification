@@ -1,4 +1,30 @@
 \section{Implementazione}
 
+L'implementazione dell'algoritmo qui presentato è stata sviluppata interamente in codice Matlab, compatibile con la versione 2014a o successive. 
+Per una corretta esecuzione è necessario avere installato alcuni pacchetti aggiuntivi:
+
+\begin{itemize}
+\item \emph{Image Acquisition Toolbox}: nesessario per l'elaborazione di immagini.
+\item \emph{Image Processing Toolbox}: necessario per l'elaborazione di immagini.
+\item \emph{Statistics and Machine Learning Toolbox}: necessario per la creazione del modello per la classificazione SVM e per la creazione di un modello a mistura di gaussiane.
+\end{itemize}
+
+Per la creazione del \emph{train set} di partenza viene utilizzata una funzione Matlab per il \emph{parsing} di valori da file in formato virgola mobile. In caso di diverse necessità sarà sufficiente modificare questa funzione senza interferire con il resto dell'esecuzione.
+
+\subsection{Configurazioni iniziali}
+
+Le configurazioni sono tutte racchiuse all'interno di un'unica classe, così da poter essere facilmente adattabile all'esecuzione su macchine diverse. 
+
+Il file \textbf{configuration.m} contiene al suo interno le configurazioni di base del progetto: è necessario modificarle prima di proseguire con l'esecuzione del programma.
+
+\begin{itemize}
+\item \textbf{image\_path}: cartella dove si trovano le immagini da analizzare.
+\item \textbf{image\_prefix}: prefisso del nome dei file.
+\item \textbf{image\_ext}: estensione dei file.
+\item \textbf{validation\_file}: file in formato CSV per la creazione del \emph{training set}.
+\item \textbf{resize}: \emph{true/false}, se vero le immagini verranno ridimensionate. Permette un'esecuzione più rapida del programma, ma viene meno l'accuratezza finale.
+\item \textbf{resizeTo}: imposta la dimensione alla quale ridimensionare l'immagine (se impostato il \emph{resize} a \emph{true}).
+\item \textbf{K}: numero di gaussiane per la creazione del modello a mistura.
+\end{itemize}
 
 \subsection{Esecuzione}
