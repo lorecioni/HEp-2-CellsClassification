@@ -39,3 +39,9 @@ Nella Tabella 1 vengono raccolti i dati ottenuti dalla valutazione del dataset t
 
 Il miglior risultato ottenuto ha classificato correttamente 93 scansioni su 137, con un accuratezza totale del 67.88 \%.
 
+Da una prima analisi sui risultati ottenuti si evince che il pattern \emph{punteggiato} è quello che ha migliore probabilità di essere correttamente classificato. Questo può dipendere anche dal fatto che è la classe con il maggior numero di esemplari e dunque il modello costruito è tendenzialmente più preciso.
+
+Un ottimo risultato si ottiene anche per quanto riguarda il pattern \emph{negativo} che corrisponde a quelle cellule dove il marcatore fluorescente non emette luce visibile. 
+
+I pattern \emph{nucleolare} e \emph{granulare} sono quelli che hanno ottenuto risultati peggiori. Il \emph{nucleolare}, ad esempio, viene riconosciuto correttamente una volta soltanto, confondendolo
+in buona parte con il \emph{punteggiato} o con l'\emph{omogeneo}, mentre il pattern \emph{granulare} viene confuso quasi in modo equo fra tutte le altre classi. Questo può in parte dipendere da un minor numero di campioni su cui creare il modello ma anche da una varietà di cellule all'interno della stessa classe.
