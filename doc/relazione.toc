@@ -3,8 +3,6 @@
 \contentsline {section}{\numberline {2}Tecniche utilizzate}{2}{section.2}
 \contentsline {subsection}{\numberline {2.1}Il filtro di Gabor}{2}{subsection.2.1}
 \contentsline {subsection}{\numberline {2.2}Descrittore di Covarianza}{4}{subsection.2.2}
-\contentsline {subsection}{\numberline {2.3}Gaussian Mixture Model}{4}{subsection.2.3}
-\contentsline {subsection}{\numberline {2.4}Fisher Tensors}{4}{subsection.2.4}
 \contentsline {section}{\numberline {3}Algoritmo}{4}{section.3}
 \contentsline {subsection}{\numberline {3.1}Estrazione delle \emph {features}}{5}{subsection.3.1}
 \contentsline {subsection}{\numberline {3.2}Creazione di un modello a mistura di gaussiane}{6}{subsection.3.2}
@@ -12,7 +10,7 @@
 \contentsline {subsection}{\numberline {3.4}Classificazione}{7}{subsection.3.4}
 \contentsline {section}{\numberline {4}Dataset}{7}{section.4}
 \contentsline {section}{\numberline {5}Risultati}{8}{section.5}
-\contentsline {section}{\numberline {6}Implementazione}{10}{section.6}
+\contentsline {section}{\numberline {6}Implementazione}{9}{section.6}
 \contentsline {subsection}{\numberline {6.1}Configurazioni iniziali}{10}{subsection.6.1}
-\contentsline {subsection}{\numberline {6.2}Esecuzione}{11}{subsection.6.2}
+\contentsline {subsection}{\numberline {6.2}Esecuzione}{10}{subsection.6.2}
 \contentsline {section}{\numberline {7}Conclusioni}{11}{section.7}

@@ -1,1 +1,11 @@
 \section{Conclusioni}
+
+La tecnica utilizzata per la classificazione di cellule epiteliali HEp-2 ha dato risultati positivi sul dataset considerato.
+
+Buona parte, circa il 70\%, delle scansioni sono state correttamente classificate, in particolare la tecnica è molto buona per scartare i campioni negativi, riconosciuti con un'alta accuratezza.
+
+Alcuni dei pattern sono però difficilmente classificabili: questo a causa anche del basso numero di campioni di training a disposizione che non consentono così la creazione di un modello adeguato.
+
+Un possibile miglioramento potrebbe essere ottenibile aumentando il numero di filtri di Gabor utilizzati, andando a estrarre un numero maggiore di osservazioni dall'immagine e rendendo più accurata la descrizione delle singole classi, andando però ad aumentare la durata di computazione.
+
+In conclusione il metodo presentato in [1] e qui implementato è una buona soluzione al problema di classificazione di cellule, migliorabile nella fase di estrazione delle \emph{features} e nella scelta dei parametri.

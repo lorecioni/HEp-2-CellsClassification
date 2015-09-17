@@ -2,16 +2,14 @@
 \BOOKMARK [1][-]{section.2}{Tecniche utilizzate}{}% 2
 \BOOKMARK [2][-]{subsection.2.1}{Il filtro di Gabor}{section.2}% 3
 \BOOKMARK [2][-]{subsection.2.2}{Descrittore di Covarianza}{section.2}% 4
-\BOOKMARK [2][-]{subsection.2.3}{Gaussian Mixture Model}{section.2}% 5
-\BOOKMARK [2][-]{subsection.2.4}{Fisher Tensors}{section.2}% 6
-\BOOKMARK [1][-]{section.3}{Algoritmo}{}% 7
-\BOOKMARK [2][-]{subsection.3.1}{Estrazione delle features}{section.3}% 8
-\BOOKMARK [2][-]{subsection.3.2}{Creazione di un modello a mistura di gaussiane}{section.3}% 9
-\BOOKMARK [2][-]{subsection.3.3}{Calcolo dei tensori di Fisher}{section.3}% 10
-\BOOKMARK [2][-]{subsection.3.4}{Classificazione}{section.3}% 11
-\BOOKMARK [1][-]{section.4}{Dataset}{}% 12
-\BOOKMARK [1][-]{section.5}{Risultati}{}% 13
-\BOOKMARK [1][-]{section.6}{Implementazione}{}% 14
-\BOOKMARK [2][-]{subsection.6.1}{Configurazioni iniziali}{section.6}% 15
-\BOOKMARK [2][-]{subsection.6.2}{Esecuzione}{section.6}% 16
-\BOOKMARK [1][-]{section.7}{Conclusioni}{}% 17
+\BOOKMARK [1][-]{section.3}{Algoritmo}{}% 5
+\BOOKMARK [2][-]{subsection.3.1}{Estrazione delle features}{section.3}% 6
+\BOOKMARK [2][-]{subsection.3.2}{Creazione di un modello a mistura di gaussiane}{section.3}% 7
+\BOOKMARK [2][-]{subsection.3.3}{Calcolo dei tensori di Fisher}{section.3}% 8
+\BOOKMARK [2][-]{subsection.3.4}{Classificazione}{section.3}% 9
+\BOOKMARK [1][-]{section.4}{Dataset}{}% 10
+\BOOKMARK [1][-]{section.5}{Risultati}{}% 11
+\BOOKMARK [1][-]{section.6}{Implementazione}{}% 12
+\BOOKMARK [2][-]{subsection.6.1}{Configurazioni iniziali}{section.6}% 13
+\BOOKMARK [2][-]{subsection.6.2}{Esecuzione}{section.6}% 14
+\BOOKMARK [1][-]{section.7}{Conclusioni}{}% 15
