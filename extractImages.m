@@ -25,7 +25,7 @@ for image_id = 1:image_number
     filename = char(trainSet(image_id, 3));
     
     if(exist(filename, 'file') ~= 2)
-       fprintf('Image %s not found.', filename);
+       warning('Image %s not found. Will not be processed', filename);
        continue;      
     end
     
