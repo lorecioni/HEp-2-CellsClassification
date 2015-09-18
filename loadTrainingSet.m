@@ -9,6 +9,13 @@
     validation_labels = validation_set(2:end, 5);
     image_ids = validation_set(2:end, 3);
     
+    
+    %TEST XLS
+    val = xlsread(configuration.validation_file_xls, 1, 'D2:D4', 'basic'); 
+    
+    
+    
+    
     filenames = cell(length(validation_labels), 1);
     
     trainSet = cell(length(validation_labels), 2);
