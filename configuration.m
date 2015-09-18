@@ -38,5 +38,8 @@ classdef configuration
        
        %GMM K
        K = 16;
+       
+       %SVM kFolds for cross-validation
+       kFolds = 8;
    end
 end
