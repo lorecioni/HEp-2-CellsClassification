@@ -9,7 +9,7 @@ Per una corretta esecuzione è necessario avere installato alcuni pacchetti aggi
 \item \emph{Statistics and Machine Learning Toolbox}: necessario per la creazione del modello per la classificazione SVM e per la creazione di un modello a mistura di gaussiane.
 \end{itemize}
 
-Per la creazione del \emph{train set} di partenza viene utilizzata una funzione Matlab per il \emph{parsing} di valori da file in formato virgola mobile. In caso di diverse necessità sarà sufficiente modificare questa funzione senza interferire con il resto dell'esecuzione.
+Per la creazione del \emph{train set} di partenza viene utilizzata una funzione Matlab per il \emph{parsing} di valori da file di validazione. In caso di diverse necessità sarà sufficiente modificare questa funzione senza interferire con il resto dell'esecuzione.
 
 \subsection{Configurazioni iniziali}
 
@@ -21,10 +21,19 @@ Il file \textbf{configuration.m} contiene al suo interno le configurazioni di ba
 \item \textbf{image\_path}: cartella dove si trovano le immagini da analizzare.
 \item \textbf{image\_prefix}: prefisso del nome dei file.
 \item \textbf{image\_ext}: estensione dei file.
+\item \textbf{validation\_format}: formato del file di validazione. Può essere \emph{xls}, \emph{xlsx}, \emph{csv}. File nel formato \emph{xls} potrebbero non essere letti correttamente dal programma nel caso di esecuzione su sistemi Unix. 
+\item \textbf{validation\_file\_worksheet\_name}: nome del foglio di lavoro utilizzato nel file di validazione.
 \item \textbf{validation\_file}: file in formato CSV per la creazione del \emph{training set}.
+\item \textbf{validation\_file\_image\_ids\_column}: indice di colonna della tabella in cui è presente l'id dell'immagine.
+\item \textbf{validation\_file\_image\_label\_column}: indice di colonna della tabella che contiene la \emph{label} assegnata all'immagine.
+\item \textbf{patterns}: mappa le varie classi con gli identificativi del file di validazione.
+\item \textbf{Gabor\_options}: impostazioni utilizzate per la creazione del banco di filtri di Gabor.
+\item \textbf{block\_size}: dimensione della finestra di scansione dell'immagine (in pixels).
+\item \textbf{delta}: passo (in pixels) di traslazione della finestra.
 \item \textbf{resize}: \emph{true/false}, se vero le immagini verranno ridimensionate. Permette un'esecuzione più rapida del programma, ma viene meno l'accuratezza finale.
 \item \textbf{resizeTo}: imposta la dimensione alla quale ridimensionare l'immagine (se impostato il \emph{resize} a \emph{true}).
 \item \textbf{K}: numero di gaussiane per la creazione del modello a mistura.
+\item \textbf{kFolds}: numero di suddivisioni per la cross-validazione.
 \end{itemize}
 
 \subsection{Esecuzione}
@@ -32,7 +41,7 @@ Il file \textbf{configuration.m} contiene al suo interno le configurazioni di ba
 L'algoritmo, come descritto nella Sezione 3 è stato suddiviso in 5 fasi fondamentali, da eseguire in ordine.
 
 \begin{enumerate}
-\item \textbf{loadTrainingSet.m}: si occupa della creazione del \emph{training set}. Legge il file CSV e va a creare una struttura contenente:
+\item \textbf{loadTrainingSet.m}: si occupa della creazione del \emph{training set}. Legge il file di validazione e va a creare una struttura contenente:
 \begin{itemize}
 \item ID dell'immagine.
 \item \emph{Label} assegnata.
