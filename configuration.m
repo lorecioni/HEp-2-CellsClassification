@@ -8,8 +8,18 @@ classdef configuration
        image_ext = 'bmp';
        
        %Validation file for training
-       validation_file = 'dataset/Validation.csv';
-       validation_file_xls = 'dataset/Validation.xls';
+       % Choose the validation format xls, xlsx, csv (xls not work on Unix,
+       % use xlsx or cvs instead)
+       validation_format = 'xlsx';      
+       validation_file = 'dataset/Validation_set.xlsx';
+       validation_file_worksheet_name = 'Lavoro';
+       validation_file_image_ids_column = 3;
+       validation_file_image_label_column = 6;
+       
+       %Patterns
+        patterns = containers.Map( ...
+            {1, 2, 3, 5, 6, 7}, ...
+            {'Omogeneo', 'Punteggiato', 'Nucleolare', 'Citoplasmico', 'Negativo', 'Granulare'});
               
        %Image resize (if set to false image will not be resized)
        resize = false;
