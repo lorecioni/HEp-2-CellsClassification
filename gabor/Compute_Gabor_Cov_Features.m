@@ -22,7 +22,14 @@ function [outCov, isSPD] = Compute_Gabor_Cov_Features(img, GR, GI, mskBlock, th)
     covSamples = [covSamples;reshape(posX,[1, SizeX * SizeY])];
     covSamples = [covSamples;reshape(posY,[1, SizeX * SizeY])];
 
-    covSamples = [covSamples; Apply_Gabor_Transform(img, 1, GR, GI)'];
+    covSamples = [covSamples; Apply_Gabor_Transform(img, 1, GR, GI)'];    
+    
+    %Testing TOPHAT
+%     for diskSize = [50 30]
+%         st = strel('disk', diskSize);
+%         imgTmp = imtophat(img, st);
+%         covSamples = [covSamples; Apply_Gabor_Transform(imgTmp, 1, GR, GI)'];
+%     end    
 
     %Computing the covariance matrix
     outCov = cov(covSamples');
