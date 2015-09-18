@@ -4,22 +4,14 @@ addpath('./utils');
 load('./mat/trainSet.mat');
 
 fprintf('-- Covariance Features Extraction --\n\n');
-
-%Gabor Filter options
-Gabor_options.Width = 11;
-Gabor_options.num_theta = 4;
-Gabor_options.num_scale = 3; 
-%Gabor shows plot
-Gabor_options.show_plot = false;
             
-[GR, GI] = Create_GaborFilters (Gabor_options);
+[GR, GI] = Create_GaborFilters (configuration.Gabor_options);
 
 %Processed images counter
 counter = 1;
 
-block_size = 80;
-delta = 20;
-threshold = 0.1;
+block_size = configuration.block_size;
+delta = configuration.delta;
 
 start_time = clock;
 
@@ -56,7 +48,7 @@ for image_id = 1:image_number
             %Considering only green level or rgb2gray(block)
             block = block(:, :, 2);
             
-            [features, flag] = Compute_Gabor_Cov_Features(block, GR, GI, mskBlock, threshold);
+            [features, flag] = Compute_Gabor_Cov_Features(block, GR, GI, mskBlock, 0.1);
             if flag == 1
                 cov_Sample.X(:, block_ind, counter) = features;                       
                 block_ind = block_ind + 1;                              
