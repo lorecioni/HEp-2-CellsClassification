@@ -6,29 +6,21 @@ Matlab code implementing [Fisher tensors for classifying human epithelial cells]
 
 Before launching the program edit configuration file.
 
-- `image_path`  images folder path.
-- `image_file_prefix` images filename prefix.
-- `image_ext` images extension.
-- `resize` true/false, resize images before processing (faster).
-- `resizeTo` resize dimension.
-- `K` values of K used in GMM.
-
 - `image_path` image folder path.
 - `image_prefix` images filename prefix.
 - `image_ext` images extension.
 - `validation_format` validation file format (_xls_, _xlsx_, _csv_). _xls_ format may not be read correctly on Unix systems.
-- `validation_file_worksheet_name` worksheet namenome del foglio di lavoro utilizzato nel file di validazione.
-- `validation_file` file in formato CSV per la creazione del _training set_.
-- `validation_file_image_ids_column` indice di colonna della tabella in cui è presente l'id dell'immagine.
-- `validation_file_image_label_column` indice di colonna della tabella che contiene la \emph{label} assegnata all'immagine.
-- `patterns` mappa le varie classi con gli identificativi del file di validazione.
-- `Gabor_options` impostazioni utilizzate per la creazione del banco di filtri di Gabor.
-- `block_size` dimensione della finestra di scansione dell'immagine (in pixels).
-- `delta` passo (in pixels) di traslazione della finestra.
-- `resize` _true/false_, se vero le immagini verranno ridimensionate. Permette un'esecuzione più rapida del programma, ma viene meno l'accuratezza finale.
-- `resizeTo` imposta la dimensione alla quale ridimensionare l'immagine (se impostato il _resize_ a _true_).
-- `K` numero di gaussiane per la creazione del modello a mistura.
-- `kFolds` numero di suddivisioni per la cross-validazione.
+- `validation_file_worksheet_name` worksheet name.
+- `validation_file` file for creating the _training set_.
+- `validation_file_image_ids_column` column index of image ID.
+- `validation_file_image_label_column` column index of labels.
+- `patterns` map the patterns with ids.
+- `Gabor_options` Gabor filters settings.
+- `block_size` sliding window size.
+- `delta` sliding window ste
+- `resize` _true/false_, if true images will be resized. 
+- `K` number of gaussians in GMM.
+- `kFolds` number of folds for cross-validation.
 
 ###Running###
 
