@@ -31,22 +31,21 @@
 
     end
     
-        counter = 1;
-        for l = 1:length(validation_labels_id)
-            if(iscellstr(validation_labels_id(l)))
-                pattern_id = str2double(validation_labels_id(l));
-            else
-                pattern_id = validation_labels_id(l);
-            end
-          
-            if(isKey(configuration.patterns, pattern_id))
-                validation_labels{counter} = configuration.patterns(pattern_id);
-                image_ids(counter) = validation_set(l, ids_column);
-                counter = counter + 1;
-            end
+    counter = 1;
+    for l = 1:length(validation_labels_id)
+        if(iscellstr(validation_labels_id(l)))
+            pattern_id = str2double(validation_labels_id(l));
+        else
+            pattern_id = validation_labels_id(l);
         end
+          
+        if(isKey(configuration.patterns, pattern_id))
+            validation_labels{counter} = configuration.patterns(pattern_id);
+            image_ids(counter) = validation_set(l, ids_column);
+            counter = counter + 1;
+        end
+    end
 
-    
     filenames = cell(length(validation_labels), 1);    
     trainSet = cell(length(validation_labels), 2);
     for i = 1:length(validation_labels) 
