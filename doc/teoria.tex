@@ -59,6 +59,31 @@ $$C = \frac{1}{n -1} \sum_{k = 1}^{n} (f_k - \mu)(f_k - \mu)^T$$
 
 con $\mu$ la media dei \emph{features points}.
 
-Poichè la matrice $C$ è definita positiva e simmetrica può essere considerata un \emph{tensore}.
+Poichè la matrice $C$ è definita positiva e simmetrica può essere considerata un \emph{tensore}. Il problema principale è che lo spazio del tensore così definito non è uno spazio Euclideo. Per questo la varietà della covarianza viene spesso definita Riemanniana per determinare un insieme di strumenti efficaci della geometria differenziale.
 
+\subsection{Tensori di Fisher}
 
+I \emph{tensori di Fisher} rappresentano la controparte definita su varietà Riemanniana dei \emph{vettori di Fisher}.
+
+Il vettore di Fisher (\emph{FV}) è una rappresentazione di una immagine ottenuta raccogliendo osservazioni locali dall'immagine stessa. E' usato comunemente come un descrittore globale di immagini nella classificazione.
+
+Sia $I = (x_1, \ldots, x_N)$ un insieme composto da $N$ vettori di $D$ osservazioni (\emph{features vectors}) estratte dall'immagine. Siano poi $G = (\mu_k, \Sigma_k, \pi_k; k = 1, \ldots, K)$ i parametri di un Modello a Mistura di Gaussiane (\emph{GMM}) opportuno per la distribuzione dei descrittori.
+
+Il GMM associa ciascun vettore $x_i$ a uno stato $k$:
+
+$$ q_{ik} = \frac{e^{-\frac{1}{2} (x_i - \mu_k)^T \Sigma_{k}^{-1}(x_i - \mu_k)}}{\sum_{t = 1}^{K} e^{-\frac{1}{2} (x_i - \mu_t)^T \Sigma_{k}^{-1}(x_i - \mu_t)}}$$
+
+Per ciascuna moda $k$ consideriamo il vettore media ed il vettore di covarianza della deviazione:
+
+$$u_{ik} = \frac{1}{N\sqrt{\pi_k}} \sum_{i = 1}^{N} q_{ik} \frac{x_{ji} - \mu_{jk}}{\sigma_{jk}}$$
+$$v_{jk} = \frac{1}{N\sqrt{2 \pi_k}} \sum_{i = 1}^{N} q_{ik} [\frac{x_{ji} - \mu_{jk}}{\sigma_{jk}}^2 - 1]$$
+
+con $j = 1, \ldots, D$.
+
+Il FV di un immagine I è la concatenazione dei vettori $u_k$ e $v_k$ per ciascuno dei $K$ stati del GMM
+
+$$FV(I) = \left[
+     \begin{array}{c}
+     u_1 \\ \vdots \\ u_K \\ v_1 \\ \vdots \\ v_K 
+     \end{array}
+     \right]$$
