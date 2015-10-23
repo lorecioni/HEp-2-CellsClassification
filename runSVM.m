@@ -1,4 +1,6 @@
 clear; clc;
+addpath('./utils');
+
 fprintf('-- SVM classifier --\n');
 start_time = clock;
 
@@ -13,11 +15,21 @@ t = templateSVM('KernelFunction','gaussian');
 % Fit SVM model. Using matlab function for multiclass training
 kFolds = configuration.kFolds;
 
+%model = fitcecoc(signatures', labels, 'Learners', t, ...
+%    'Prior', 'uniform', 'CrossVal', 'on', 'KFold', kFolds);
+
+%Training without crossvalidation
 model = fitcecoc(signatures', labels, 'Learners', t, ...
-    'Prior', 'uniform', 'CrossVal', 'on', 'KFold', kFolds);
+    'Prior', 'uniform');
 
 % Predict labels on the model
-predictedLabels = kfoldPredict(model);
+predictedLabels = model.resubPredict;
+
+%predictedLabels = kfoldPredict(model);
+
+%TEST predict
+outTest = model.predict(rand(1, 1920))
+%END
 
 % Generate and plot confusion matrix
 [confusionMatrix, classes] = plotConfusionMatrix(labels, predictedLabels');
