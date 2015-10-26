@@ -40,7 +40,7 @@
         end
           
         if(isKey(configuration.patterns, pattern_id))
-            validation_labels{counter} = configuration.patterns(pattern_id);
+            validation_labels{counter} = pattern_id;
             image_ids(counter) = validation_set(l, ids_column);
             counter = counter + 1;
         end
@@ -67,8 +67,8 @@
 
         filenames(i) = filename;
         
-        trainSet{i, 1} = image_ids(i);
-        trainSet{i, 2} = char(validation_labels(i));
+        trainSet{i, 1} = image_ids(i);       
+        trainSet{i, 2} = validation_labels(i);
         trainSet{i, 3} = char(filename);   
     end
 
