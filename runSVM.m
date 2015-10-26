@@ -4,6 +4,7 @@ addpath('./utils');
 fprintf('-- SVM classifier --\n');
 start_time = clock;
 
+% Using libsvm
 wdir = pwd;
 libsvmpath = [ wdir '/' fullfile('lib', 'libsvm-3.20', 'matlab')];
 addpath(libsvmpath)
