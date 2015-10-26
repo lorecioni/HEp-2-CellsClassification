@@ -47,7 +47,7 @@
     end
 
     filenames = cell(length(validation_labels), 1);    
-    trainSet = cell(length(validation_labels), 2);
+    trainSet = cell(length(validation_labels), 3);
     for i = 1:length(validation_labels) 
         if(isnumeric(image_ids(i)))
             filename_id = int2str(image_ids(i));
