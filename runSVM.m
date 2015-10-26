@@ -4,35 +4,42 @@ addpath('./utils');
 fprintf('-- SVM classifier --\n');
 start_time = clock;
 
+wdir = pwd;
+libsvmpath = [ wdir '/' fullfile('lib', 'libsvm-3.20', 'matlab')];
+addpath(libsvmpath)
+
 K = configuration.K;
 load(['./mat/signaturesFV_K' int2str(K)]);
 
 image_number = length(labels);
 
-% Using gaussian kernel
-t = templateSVM('KernelFunction','gaussian');
-
 % Fit SVM model. Using matlab function for multiclass training
 kFolds = configuration.kFolds;
 
-%model = fitcecoc(signatures', labels, 'Learners', t, ...
-%    'Prior', 'uniform', 'CrossVal', 'on', 'KFold', kFolds);
+% Cross validation
+iterator = 1; 
+bestC = 0;
+bestGamma = 0;
+bestAccuracy = 0;
 
-%Training without crossvalidation
-model = fitcecoc(signatures', labels, 'Learners', t, ...
-    'Prior', 'uniform');
+for c = 1e-3 %Testing optimal value [1e-1 1e-2 1e-3 1e-4 1e-5 1e-6 1e+0 1e+1 1e+2 1e+3 1e+4 1e+5 1e+6]
+    for gamma = [0.8 0.9 1.1 1.5]
+    	acc = svmtrain(labels', signatures', sprintf('-q -b 1 -t 2 -g %f -c %f -v %f',gamma, c, kFolds));
+        if(acc > bestAccuracy)
+        	bestAccuracy = acc;
+            bestC = c;
+            bestGamma = gamma;
+        end
+        iterator = iterator + 1;
+    end
+end
 
-% Predict labels on the model
-predictedLabels = model.resubPredict;
-
-%predictedLabels = kfoldPredict(model);
-
-%TEST predict
-outTest = model.predict(rand(1, 1920))
-%END
+% Train the model and test with optimal values of gamma and C
+model = svmtrain(labels', signatures',sprintf('-q -b 1 -t 2 -g %f -c %f', bestGamma, bestC));
+predictedLabels = svmpredict(labels',signatures',model, '-b 1');
 
 % Generate and plot confusion matrix
-[confusionMatrix, classes] = plotConfusionMatrix(labels, predictedLabels');
+[confusionMatrix, classes] = plotConfusionMatrix(num2classes(labels), num2classes(predictedLabels));
 
 % Evaluate results
 classFrequency = sum(confusionMatrix, 2);
