@@ -29,8 +29,8 @@ classdef configuration
             {'Omogeneo', 'Punteggiato', 'Nucleolare', 'Citoplasmico', 'Negativo', 'Granulare'});
               
        %Image resize (if set to false image will not be resized)
-       resize = false;
-       resizeTo = 1000;
+       resize = true;
+       resizeTo = 90;
        
        %Gabor Filter options
        Gabor_options = struct(...
@@ -40,8 +40,8 @@ classdef configuration
            'show_plot', false);
        
        %Window size and overlap
-       block_size = 80;
-       delta = 20;
+       block_size = 20;
+       delta = 5;
        
        %GMM K
        K = 16;
