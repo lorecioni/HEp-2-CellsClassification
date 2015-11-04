@@ -25,9 +25,7 @@ image_number =  train_size + test_size;
 fprintf('Processing %d images\n\n', image_number);
 fprintf('Image processed: 0 / 0.00 %% - Elapsed Time: 0.00 s\n');
 
-%%%%%%%%%%%%%%%%
-%%% Train set %%
-%%%%%%%%%%%%%%%%
+%% Extract features from Train Set %%
 
 for i = 1:train_size
     filename = char(trainSet(i, 1));
@@ -76,10 +74,9 @@ end
 TrainSet.Nblocks = cov_Sample.Nblocks;
 TrainSet.X = cov_Sample.X;
 TrainSet.labels = cov_Sample.y;
+save('./mat/Cov_Gabor_Train','TrainSet');
 
-%%%%%%%%%%%%%%%%
-%%% Test set %%%
-%%%%%%%%%%%%%%%%
+%% Extract features from Test Set %%
 
 for i = 1:test_size
     filename = char(testSet(i, 1));
@@ -128,6 +125,4 @@ end
 TestSet.Nblocks = cov_Sample.Nblocks;
 TestSet.X = cov_Sample.X;
 TestSet.labels = cov_Sample.y;
-
-save('./mat/Cov_Gabor_Train','TrainSet');
 save('./mat/Cov_Gabor_Test','TestSet');

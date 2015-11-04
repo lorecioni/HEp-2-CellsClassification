@@ -41,7 +41,7 @@ classdef configuration
        
        %Window size and overlap
        block_size = 20;
-       delta = 5;
+       delta = 10;
        
        %GMM K
        K = 16;
