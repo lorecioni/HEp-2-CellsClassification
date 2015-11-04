@@ -4,8 +4,8 @@ classdef configuration
    properties (Constant)  
        
        % Set full images or single cells classification
-       full_images = 0;
-       cell_images = 1;
+       full_images = 1;
+       cell_images = 0;
        
        %Paths for train and test dataset
        train_path = 'dataset/train/'; 
