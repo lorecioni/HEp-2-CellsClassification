@@ -63,7 +63,7 @@ for i = 1:train_size
             end
          end
     end
-    cov_Sample.y(counter) = trainSet(i, 3);
+    cov_Sample.y(counter) = cell2mat(trainSet(i, 3));
     cov_Sample.Nblocks(counter) = block_ind - 1;
     fprintf('Image processed: %d / %.2f %%', counter, ...
         (counter * 100/image_number));
@@ -77,6 +77,8 @@ TrainSet.labels = cov_Sample.y;
 save('./mat/Cov_Gabor_Train','TrainSet');
 
 %% Extract features from Test Set %%
+
+clear cov_Sample;
 
 for i = 1:test_size
     filename = char(testSet(i, 1));
@@ -114,7 +116,7 @@ for i = 1:test_size
             end
          end
     end
-    cov_Sample.y(counter) = testSet(i, 3);
+    cov_Sample.y(counter) = cell2mat(testSet(i, 3));
     cov_Sample.Nblocks(counter) = block_ind - 1;
     fprintf('Image processed: %d / %.2f %%', counter, ...
         (counter * 100/image_number));
