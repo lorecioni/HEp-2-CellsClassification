@@ -2,8 +2,15 @@
 
 classdef configuration
    properties (Constant)       
-       %Image path
-       image_path = 'dataset/immagini_contest/';  
+       
+       %Paths for train and test dataset
+       train_path = 'dataset/train/'; 
+       train_labels = 'dataset/trnLabels.mat'; 
+       test_path = 'dataset/test/'; 
+       test_labels = 'dataset/tstLabels.mat'; 
+       
+       %Image path (for full images)
+       image_path = 'dataset/images/';  
        image_prefix = 'Siero_';
        image_ext = 'bmp';
        

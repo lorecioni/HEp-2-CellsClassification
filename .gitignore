@@ -1,4 +1,5 @@
 /dataset/immagini_contest/
+/dataset/images/*
 /dataset/*.pdf
 /dataset/train/*
 /dataset/test/*
@@ -18,3 +19,5 @@ dataset/~$Validation.xlsx
 lib/libsvm-3.20/matlab/libsvmread.mexmaci64
 
 mat/trainSet_FULL.mat
+
+*.m~

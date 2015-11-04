@@ -75,7 +75,7 @@
     table(image_ids', validation_labels', filenames, ...
     'VariableNames', {'ID', 'Label', 'Filename'})
 
-    save('./mat/trainSet', 'trainSet');
+    save('./mat/trainSetFull', 'trainSet');
     
     fprintf('Training Set saved correctly!\n\n');
 end

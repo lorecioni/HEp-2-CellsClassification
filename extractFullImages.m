@@ -1,7 +1,7 @@
 clear; clc;
 addpath('./gabor');
 addpath('./utils');
-load('./mat/trainSet.mat');
+load('./mat/trainSetFull.mat');
 
 fprintf('-- Covariance Features Extraction --\n\n');
             
