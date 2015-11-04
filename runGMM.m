@@ -19,8 +19,7 @@ vectors = vectors(:, randperm(size(vectors,2)));
 covType = 'diagonal'; 
 options = statset('Display', 'final','MaxIter', 500, 'TolFun', 1e-6);
 
-GMModel = fitgmdist(vectors', K, 'Regularize', eps, 'Options', options, ...
-                    'CovarianceType', covType, 'Replicates', 1);
+GMModel = gmdistribution.fit(vectors', K, 'Regularize', eps, 'Options', options, 'Replicates', 1, 'CovType', covType);    
                 
 save(['./mat/GMModel_K' int2str(K)], 'GMModel'); 
 

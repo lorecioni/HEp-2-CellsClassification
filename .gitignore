@@ -1,5 +1,8 @@
 /dataset/immagini_contest/
 /dataset/*.pdf
+/dataset/train/*
+/dataset/test/*
+/lib/*
 /mat/GMM*.mat
 /mat/signatures*.mat
 /mat/Cov*.mat
@@ -7,3 +10,11 @@
 dataset/immagini_contest.zip
 
 dataset/~$Validation.xlsx
+
+*.mexmaci64
+
+*.mexmaci64
+
+lib/libsvm-3.20/matlab/libsvmread.mexmaci64
+
+mat/trainSet_FULL.mat
