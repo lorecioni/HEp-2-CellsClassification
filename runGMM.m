@@ -1,7 +1,14 @@
 clear; clc;
 fprintf('-- Gaussian Mixtures Model fitting --\n\n');
 
-load('./mat/Cov_Gabor');
+if configuration.full_images
+    load('./mat/Cov_Gabor');
+    rand_max = 40;
+elseif configuration.cell_images
+    load('./mat/Cov_Gabor_Train');
+    rand_max = 20;
+end
+
 start_time = clock;
 
 K = configuration.K;
@@ -10,11 +17,11 @@ vectors  = [];
 
 for i=1:size(TrainSet.X,3)
     tempM = TrainSet.X(:,1:TrainSet.Nblocks(i),i);
-	randN = randperm(TrainSet.Nblocks(i), 40);
+	randN = randperm(TrainSet.Nblocks(i), rand_max);
 	tempM = tempM(:,randN);
 	vectors = cat(2 , vectors, tempM);  
 end
-vectors = vectors(:, randperm(size(vectors,2)));
+vectors = vectors(:, randperm(size(vectors, 2)));
 
 covType = 'diagonal'; 
 options = statset('Display', 'final','MaxIter', 500, 'TolFun', 1e-6);
