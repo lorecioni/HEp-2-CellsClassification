@@ -4,7 +4,7 @@ addpath('./utils');
 load('./mat/trainSet.mat');
 load('./mat/testSet.mat');
 
-fprintf('-- Covariance Features Extraction --\n\n');
+fprintf('-- Cells Images : Feature Extraction --\n\n');
             
 [GR, GI] = Create_GaborFilters (configuration.Gabor_options);
 

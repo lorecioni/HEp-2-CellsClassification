@@ -3,7 +3,7 @@ addpath('./gabor');
 addpath('./utils');
 load('./mat/trainSetFull.mat');
 
-fprintf('-- Covariance Features Extraction --\n\n');
+fprintf('-- Full image : Features Extraction --\n\n');
             
 [GR, GI] = Create_GaborFilters (configuration.Gabor_options);
 

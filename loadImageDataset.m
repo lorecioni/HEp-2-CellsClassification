@@ -5,13 +5,13 @@
     addpath('./utils');
              
     %Read validation set
-    file_ext = configuration.validation_format;
-    ids_column = configuration.validation_file_image_ids_column;
-    label_column = configuration.validation_file_image_label_column;
+    file_ext = configuration.full_validation_format;
+    ids_column = configuration.full_validation_file_image_ids_column;
+    label_column = configuration.full_validation_file_image_label_column;
     
     if(strcmp(file_ext, 'csv') == 1)
         %Read from csv
-        validation_set = readCSV(configuration.validation_file, ';');
+        validation_set = readCSV(configuration.full_validation_file, ';');
         validation_set = validation_set(2:end, :);
         validation_labels_id = validation_set(2:end, label_column);
         counter = 1;
@@ -25,8 +25,8 @@
         end          
     else
         %Read from xls/xlsx
-        validation_set = xlsread(configuration.validation_file, ...
-            configuration.validation_file_worksheet_name);
+        validation_set = xlsread(configuration.full_validation_file, ...
+            configuration.full_validation_file_worksheet_name);
         validation_labels_id = validation_set(:, label_column);
 
     end
@@ -54,8 +54,8 @@
         else
             filename_id = image_ids(i);
         end
-        filename = strcat(configuration.image_path, configuration.image_prefix, ...
-            filename_id, '.', configuration.image_ext);       
+        filename = strcat(configuration.full_image_path, configuration.full_image_prefix, ...
+            filename_id, '.', configuration.full_image_ext);       
         
         if(exist(char(filename), 'file') ~= 2)
            warning('Image %s not found. Will not be processed.\n', char(filename));
