@@ -3,11 +3,11 @@
 /dataset/*.pdf
 /dataset/train/*
 /dataset/test/*
-/lib/*
+/lib/libsvm-3.20/
 /mat/GMM*.mat
 /mat/signatures*.mat
 /mat/Cov*.mat
-
+lib/*
 dataset/immagini_contest.zip
 
 dataset/~$Validation.xlsx
