@@ -1,16 +1,29 @@
 clear; clc;
 addpath('./utils');
+load(['./mat/signaturesFV_K' int2str(K)]);
 
-fprintf('-- SVM classifier --\n');
+%% Nearest Neighbour Classifier%%
+
+fprintf('-- Nearest Neighbour Classifier --\n');
 start_time = clock;
+dist = pdist2(signaturesTest' , signatures' );
+[~, min_loc] = min(dist, [], 2);
+y_hat = y(min_loc);
+acc1NN_power = 100 * (1-length(find( (y_hat-yTest) ~=0 ) )/numTest)
+fprintf('Elapsed time: %.2f s\n\n', etime(clock, start_time));
 
+%% SVM Classifier %%
+
+fprintf('-- SVM Classifier --\n');
+
+start_time = clock;
 % Using libsvm
 wdir = pwd;
 libsvmpath = [ wdir '/' fullfile('lib', 'libsvm-3.20', 'matlab')];
 addpath(libsvmpath)
 
 K = configuration.K;
-load(['./mat/signaturesFV_K' int2str(K)]);
+
 
 % SVM training options (radial basis kernel)
 % Setting kFold number for cross validation
