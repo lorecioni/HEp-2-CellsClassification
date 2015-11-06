@@ -1,8 +1,8 @@
-function showResults(trueLabels, predictedLabels, plot)
+function showResults(trueLabels, predictedLabels, plot, title)
 %Show classification results
     
     [confusionMatrix, classes] = plotConfusionMatrix(num2classes(trueLabels), ...
-        num2classes(predictedLabels), plot);
+        num2classes(predictedLabels), plot, title);
     
     % Evaluate results
     classFrequency = sum(confusionMatrix, 2);
@@ -20,4 +20,3 @@ function showResults(trueLabels, predictedLabels, plot)
     fprintf('Accuracy: %.2f %%\n', accuracy * 100);
     
 end
-

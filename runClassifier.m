@@ -1,11 +1,15 @@
 clear; clc;
 addpath('./utils');
 K = configuration.K;
+show_plot = configuration.showConfusionMatrix;
+
 load(['./mat/signaturesFV_K' int2str(K)]);
 
 %% Nearest Neighbour Classifier%%
 
 if configuration.use_NN_classifier
+    
+    fprintf('-- Nearest Neighbour Classifier --\n');
     
     if configuration.full_images
        %If considering full images split dataset in train and test
@@ -15,12 +19,11 @@ if configuration.use_NN_classifier
        testLabels = labels(101:end);
     end
     
-    fprintf('-- Nearest Neighbour Classifier --\n');
     start_time = clock;
     dist = pdist2(testSignatures' , trainSignatures' );
     [~, id] = min(dist, [], 2);
     predictedLabels = trainLabels(id);
-    acc_1NN = 100 * (1-length(find((predictedLabels - testLabels) ~= 0) )/length(testLabels));
+    showResults(testLabels, predictedLabels, show_plot, 'NN Classification');
     fprintf('Elapsed time: %.2f s\n\n', etime(clock, start_time));
 end
 
@@ -103,7 +106,7 @@ if configuration.use_SVM_classifier
         fprintf('Cross Validation Accuracy: %.2f %%\n', mean(accuracies));
 
         % Show classification result
-        showResults(datasetLabels, predictedLabels, configuration.showConfusionMatrix);
+        showResults(datasetLabels, predictedLabels, show_plot, 'SVM Classification');
 
     else
         % Evaluate model on test set
@@ -124,7 +127,7 @@ if configuration.use_SVM_classifier
         % Evaluate model (on test)
         predictedLabels = svmpredict(testLabels', testSignatures', model, '-b 1');
 
-        showResults(testLabels, predictedLabels, configuration.showConfusionMatrix);
+        showResults(testLabels, predictedLabels, show_plot, 'SVM Classification');
     end
 
     fprintf('Elapsed time: %.2f s\n\n', etime(clock, start_time));

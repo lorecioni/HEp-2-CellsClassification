@@ -1,4 +1,4 @@
-function [confusionMatrix, classes] = plotConfusionMatrix(trueLabels, predictedLabels, plot)
+function [confusionMatrix, classes] = plotConfusionMatrix(trueLabels, predictedLabels, plot, title)
 %Generate confusion matrix and plot the result
 
     [confusionMatrix, classes] = confusionmat(trueLabels, predictedLabels);
@@ -10,7 +10,7 @@ function [confusionMatrix, classes] = plotConfusionMatrix(trueLabels, predictedL
     if plot      
         figure; imagesc(confusionMat); 
 
-        title('Confusion Matrix');
+        title(title);
         %Determine the color scheme gray (so higher values are black and lower values are white)
         colormap(flipud(gray));
 
