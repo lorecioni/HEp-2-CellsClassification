@@ -57,6 +57,8 @@ classdef configuration
        K = 16;
        
        %Classification
+       use_NN_classifier = true;
+       use_SVM_classifier = true;
        crossvalidate = true;
        crossvalidate_SVM_parameters = false;
        kFolds = 10;
