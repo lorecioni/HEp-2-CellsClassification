@@ -36,6 +36,9 @@ Feature extraction option
 
 Classification options
 
+- `use_NN_classifier` evaluate results with NN classifier.
+- `use_SVM_classifier` evaluate results with SVM classifier.
+- `K` number of gaussians in GMM.
 - `K` number of gaussians in GMM.
 - `patterns` map the patterns with ids.
 - `crossvalidate` for evaluate dataset with crossvalidation
