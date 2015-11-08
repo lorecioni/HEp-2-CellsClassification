@@ -50,8 +50,8 @@ Classification options
 
 Prepare first your training set. You can choose between:
 
-- `loadCellDataset` loads single cells dataset
-- `loadImageDataset` loads full image dataset
+- `loadCellDataset` loads single cells dataset.
+- `loadImageDataset` loads full image dataset.
 
 This will show you a table containing image id, label and filename.
 
