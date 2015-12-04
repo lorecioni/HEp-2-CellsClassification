@@ -73,7 +73,3 @@ elseif configuration.cell_images
         'testSignatures','trainLabels', 'testLabels');
 end
 
-
-
-    
-

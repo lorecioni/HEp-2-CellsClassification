@@ -5,25 +5,47 @@ show_plot = configuration.showConfusionMatrix;
 
 load(['./mat/signaturesFV_K' int2str(K)]);
 
+% Setting kFold number for cross validation
+kFolds = configuration.kFolds;
+
 %% Nearest Neighbour Classifier%%
 
 if configuration.use_NN_classifier
     
     fprintf('-- Nearest Neighbour Classifier --\n');
     
-    if configuration.full_images
-       %If considering full images split dataset in train and test
-       trainSignatures = signatures(:, 1:100);
-       testSignatures = signatures(:, 101:end);
-       trainLabels = labels(1:100);
-       testLabels = labels(101:end);
-    end
-    
     start_time = clock;
-    dist = pdist2(testSignatures' , trainSignatures' );
-    [~, id] = min(dist, [], 2);
-    predictedLabels = trainLabels(id);
-    showResults(testLabels, predictedLabels, show_plot, 'NN Classification');
+
+    if configuration.full_images
+        datasetSignatures = signatures;
+        datasetLabels = labels;
+        clear signatures;
+        clear labels;
+     else
+        datasetSignatures = cat(2, trainSignatures, testSignatures);
+        datasetLabels = cat(2, trainLabels, testLabels);
+     end
+    
+    predictedLabels = zeros(size(datasetSignatures, 2), 1);
+
+    % Split dataset into k folds
+    splits = cvpartition(1:size(datasetSignatures, 2), 'kFold', kFolds);
+
+    for k = 1:kFolds
+    	trnIndex = training(splits, k);
+    	tstIndex = test(splits, k);
+
+    	trnSet = datasetSignatures(:, trnIndex)';
+    	trnLbl = datasetLabels(trnIndex)';
+    	tstSet = datasetSignatures(:, tstIndex)';
+     	tstLbl = datasetLabels(tstIndex)';
+
+        dist = pdist2(tstSet, trnSet);
+        [~, id] = min(dist, [], 2);
+        predictedLabels(tstIndex) = datasetLabels(id)';
+    end
+
+    showResults(datasetLabels', predictedLabels, show_plot, 'NN Classification');
     fprintf('Elapsed time: %.2f s\n\n', etime(clock, start_time));
 end
 
@@ -39,9 +61,6 @@ if configuration.use_SVM_classifier
     addpath(libsvmpath)
     
     % SVM training options (radial basis kernel)
-    % Setting kFold number for cross validation
-    kFolds = configuration.kFolds;
-
     % Cross validation parameters
     bestAccuracy = 0;
     SVM_c = 1e-3;
