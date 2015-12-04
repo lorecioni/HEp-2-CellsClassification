@@ -14,4 +14,6 @@
 \contentsline {section}{\numberline {6}Implementazione}{10}{section.6}
 \contentsline {subsection}{\numberline {6.1}Configurazioni iniziali}{11}{subsection.6.1}
 \contentsline {subsection}{\numberline {6.2}Esecuzione}{12}{subsection.6.2}
-\contentsline {section}{\numberline {7}Conclusioni}{12}{section.7}
+\contentsline {section}{\numberline {7}Sviluppi successivi}{12}{section.7}
+\contentsline {subsection}{\numberline {7.1}Analisi}{12}{subsection.7.1}
+\contentsline {section}{\numberline {8}Conclusioni}{13}{section.8}
