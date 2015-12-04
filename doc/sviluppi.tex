@@ -39,13 +39,38 @@ I risultati ottenuti con queste modifiche sono molto migliori dei precedenti, an
 
 I risultati sono ottenuti cross-validando il dataset in 10 sottoparti. La classificazione è fatta tramite SVM, utilizzando però la libreria open-source \emph{libSVM}\footnote{LibSVM, \emph{A Library for Support Vector Machines}, https://www.csie.ntu.edu.tw/~cjlin/libsvm/} alla versione 3.2. L'utilizzo di questa libreria ha consentito di poter meglio personalizzare i parametri del classificatore e presenta una migliorazione nei tempi di computazione rispetto alla versione implementata nativamente in Matlab.
 
-I risultati ottenuti vengono presentati nella matrice di confusione e nella tabella
+I risultati ottenuti vengono presentati nella matrice di confusione, Figura \ref{fig:mat2} e nella Tabella \ref{table:2}.
 
 \begin{figure}[H] 
   \centering
     \includegraphics[width=0.9\textwidth]{images/conf_mat_2.png}
     \caption{{\small \textit{Matrice di confusione}}}
+    \label{fig:mat2}
 \end{figure}
+
+\begin{table}[H]
+\centering
+\footnotesize
+\begin{tabular}{|l | c | c | c |} 
+ \hline 
+ \textbf{Classe} &  \textbf{Totale} & \textbf{Corretti} & \textbf{Percentuale} \\ [0.5ex] 
+ \hline\hline
+ Omogeneo & 330 & 275 & 83.33\\
+ Punteggiato & 210 & 152 & 72.38\\
+ Nucleolare & 241 & 179 & 74.27\\
+ Centromero & 357 & 291 & 81.51\\
+ Fin. Punteggiato & 208 & 154 & 74.04\\
+ Citoplasmico & 109 & 108 & 99.08\\
+ \hline
+\end{tabular}
+\caption{Risultati}
+\label{table:2}
+\end{table}
+
+
+Il miglior risultato ottenuto ha classificato correttamente 1159 cellule su 1455, con un accuratezza totale del 79.66 \%.
+
+Particolari miglioramenti si hanno per quanto riguarda la classificazione di cellule con pattern \emph{citoplasmico} e \emph{omogeneo}.
 
 
 

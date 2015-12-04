@@ -3,17 +3,19 @@
 \contentsline {section}{\numberline {2}Tecniche utilizzate}{2}{section.2}
 \contentsline {subsection}{\numberline {2.1}Il filtro di Gabor}{2}{subsection.2.1}
 \contentsline {subsection}{\numberline {2.2}Descrittore di Covarianza}{4}{subsection.2.2}
-\contentsline {subsection}{\numberline {2.3}Tensori di Fisher}{4}{subsection.2.3}
+\contentsline {subsection}{\numberline {2.3}Tensori di Fisher}{5}{subsection.2.3}
 \contentsline {section}{\numberline {3}Algoritmo}{5}{section.3}
-\contentsline {subsection}{\numberline {3.1}Estrazione delle \emph {features}}{5}{subsection.3.1}
+\contentsline {subsection}{\numberline {3.1}Estrazione delle \emph {features}}{6}{subsection.3.1}
 \contentsline {subsection}{\numberline {3.2}Creazione di un modello a mistura di gaussiane}{7}{subsection.3.2}
 \contentsline {subsection}{\numberline {3.3}Calcolo dei \emph {tensori di Fisher}}{7}{subsection.3.3}
-\contentsline {subsection}{\numberline {3.4}Classificazione}{7}{subsection.3.4}
-\contentsline {section}{\numberline {4}Dataset}{7}{section.4}
-\contentsline {section}{\numberline {5}Risultati}{8}{section.5}
+\contentsline {subsection}{\numberline {3.4}Classificazione}{8}{subsection.3.4}
+\contentsline {section}{\numberline {4}Dataset}{8}{section.4}
+\contentsline {section}{\numberline {5}Risultati}{9}{section.5}
 \contentsline {section}{\numberline {6}Implementazione}{10}{section.6}
 \contentsline {subsection}{\numberline {6.1}Configurazioni iniziali}{11}{subsection.6.1}
 \contentsline {subsection}{\numberline {6.2}Esecuzione}{12}{subsection.6.2}
 \contentsline {section}{\numberline {7}Sviluppi successivi}{12}{section.7}
 \contentsline {subsection}{\numberline {7.1}Analisi}{12}{subsection.7.1}
-\contentsline {section}{\numberline {8}Conclusioni}{13}{section.8}
+\contentsline {subsection}{\numberline {7.2}Miglioramento del dataset}{13}{subsection.7.2}
+\contentsline {subsubsection}{\numberline {7.2.1}Risultati}{13}{subsubsection.7.2.1}
+\contentsline {section}{\numberline {8}Conclusioni}{15}{section.8}
