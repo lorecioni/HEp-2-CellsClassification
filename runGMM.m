@@ -1,11 +1,7 @@
 clear; clc;
 fprintf('-- Gaussian Mixtures Model fitting --\n\n');
 
-if configuration.full_images
-    load('./mat/Cov_Gabor');
-elseif configuration.cell_images
-    load('./mat/Cov_Gabor_Train');
-end
+load('./mat/Cov_Gabor_Train');
 
 start_time = clock;
 

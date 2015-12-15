@@ -16,15 +16,8 @@ if configuration.use_NN_classifier
     
     start_time = clock;
 
-    if configuration.full_images
-        datasetSignatures = signatures;
-        datasetLabels = labels;
-        clear signatures;
-        clear labels;
-     else
-        datasetSignatures = cat(2, trainSignatures, testSignatures);
-        datasetLabels = cat(2, trainLabels, testLabels);
-     end
+    datasetSignatures = cat(2, trainSignatures, testSignatures);
+    datasetLabels = cat(2, trainLabels, testLabels);
     
     predictedLabels = zeros(size(datasetSignatures, 2), 1);
 
@@ -90,16 +83,9 @@ if configuration.use_SVM_classifier
     %%% SVM crossvalidation
     if configuration.crossvalidate  
 
-        if configuration.full_images
-            datasetSignatures = signatures;
-            datasetLabels = labels;
-            clear signatures;
-            clear labels;
-        else
-            datasetSignatures = cat(2, trainSignatures, testSignatures);
-            datasetLabels = cat(2, trainLabels, testLabels);
-        end
-
+        datasetSignatures = cat(2, trainSignatures, testSignatures);
+        datasetLabels = cat(2, trainLabels, testLabels);
+        
         predictedLabels = zeros(size(datasetSignatures, 2), 1);
         accuracies = zeros(kFolds, 1);
 
@@ -129,16 +115,6 @@ if configuration.use_SVM_classifier
 
     else
         % Evaluate model on test set
-
-        if configuration.full_images
-            %If considering full images split dataset in train and test
-            %(custom)
-            trainSignatures = signatures(:, 1:100);
-            testSignatures = signatures(:, 101:end);
-            trainLabels = labels(1:100);
-            testLabels = labels(101:end);
-        end
-
         % Train the model and test
         options = ['-q -b 1 -t 2 -g ' num2str(SVM_gamma) ' -c ' num2str(SVM_c)];
         model = svmtrain(trainLabels', trainSignatures', options);
