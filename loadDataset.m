@@ -1,4 +1,4 @@
-clear all;
+clear;
 
 % Load validation set
 load(['./' configuration.train_labels]);
