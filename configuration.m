@@ -3,21 +3,28 @@
 classdef configuration
    properties (Constant)  
        
+       %Extract image feature for train and test
+       extract_train = true;
+       extract_test = false;
+       
        %Paths for train and test dataset
-       train_path = 'dataset/train/'; 
-       train_labels = 'dataset/trnLabels.mat'; 
-       test_path = 'dataset/test/'; 
-       test_labels = 'dataset/tstLabels.mat'; 
+       train_path = '/Volumes/KINGSTONE/Task2TrainingSet/train/'; 
+       train_labels = '/Volumes/KINGSTONE/Task2TrainingSet/gt_train.csv'; 
+       test_path = ''; 
+       test_labels = ''; 
        
        %Patterns
        patterns = containers.Map( ...
-            {1, 2, 3, 4, 5, 6}, ...
-            {'homogeneous', 'coarse_speckled', 'fine_speckled', 'centromere', 'nucleolar', 'cytoplasmatic'}...
+            {1, 2, 3, 4, 5, 6, 7}, ...
+            {'homogeneous', 'speckled', 'nucleolar', 'centromere', 'golgi', 'numem', 'mitsp'}...
        );
 
+       %Grayscale
+       gray = false;
+   
        %Image resize (if set to false image will not be resized)
        resize = true;
-       resizeTo = 90;
+       resizeTo = 1000;
        
        %Gabor Filter options
        Gabor_options = struct(...
@@ -27,8 +34,8 @@ classdef configuration
            'show_plot', false);
        
        %Window size and overlap
-       block_size = 20;
-       delta = 10;
+       block_size = 80;
+       delta = 20;
        
        %GMM K
        K = 16;

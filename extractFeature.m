@@ -37,7 +37,7 @@ for i = 1:train_size
     end
     
     I = imread(filename);
-    M = imread(mask);
+    M = im2bw(imread(mask), 0.5);
     
     %Resize images
     if(configuration.resize)
@@ -52,9 +52,11 @@ for i = 1:train_size
             temp2 = cs:cs + block_size - 1;
             block = I(temp1, temp2, :);
             mskBlock = M(temp1, temp2);
-            
+                        
             %Considering only green level or rgb2gray(block)
-            block = block(:, :, 2);
+            if configuration.gray
+                block = block(:, :, 2);
+            end
             
             [features, flag] = Compute_Gabor_Cov_Features(block, GR, GI, mskBlock, 0.1);
             if flag == 1
