@@ -4,14 +4,14 @@ classdef configuration
    properties (Constant)  
        
        %Extract image feature for train and test
-       extract_train = true;
-       extract_test = false;
+       extract_train = false;
+       extract_test = true;
        
        %Paths for train and test dataset
        train_path = '/Volumes/KINGSTONE/Task2TrainingSet/train/'; 
        train_labels = '/Volumes/KINGSTONE/Task2TrainingSet/gt_train.csv'; 
-       test_path = ''; 
-       test_labels = ''; 
+       test_path = '/Volumes/KINGSTONE/ICIP2013_training_1.0/train/'; 
+       test_labels = '/Volumes/KINGSTONE/ICIP2013_training_1.0/gt_test.csv'; 
        
        %Patterns
        patterns = containers.Map( ...
@@ -24,7 +24,7 @@ classdef configuration
    
        %Image resize (if set to false image will not be resized)
        resize = true;
-       resizeTo = 1000;
+       resizeTo = 75;
        
        %Gabor Filter options
        Gabor_options = struct(...
@@ -34,8 +34,8 @@ classdef configuration
            'show_plot', false);
        
        %Window size and overlap
-       block_size = 80;
-       delta = 20;
+       block_size = 20;
+       delta = 5;
        
        %GMM K
        K = 16;
