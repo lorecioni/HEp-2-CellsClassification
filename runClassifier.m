@@ -13,33 +13,41 @@ kFolds = configuration.kFolds;
 if configuration.use_NN_classifier
     
     fprintf('-- Nearest Neighbour Classifier --\n');
-    
     start_time = clock;
+    if configuration.crossvalidate  
+        
+        datasetSignatures = cat(2, trainSignatures, testSignatures);
+        datasetLabels = cat(2, trainLabels, testLabels);
 
-    datasetSignatures = cat(2, trainSignatures, testSignatures);
-    datasetLabels = cat(2, trainLabels, testLabels);
-    
-    predictedLabels = zeros(size(datasetSignatures, 2), 1);
+        predictedLabels = zeros(size(datasetSignatures, 2), 1);
 
-    % Split dataset into k folds
-    splits = cvpartition(1:size(datasetSignatures, 2), 'kFold', kFolds);
+        % Split dataset into k folds
+        splits = cvpartition(1:size(datasetSignatures, 2), 'kFold', kFolds);
 
-    for k = 1:kFolds
-    	trnIndex = training(splits, k);
-    	tstIndex = test(splits, k);
+        for k = 1:kFolds
+            trnIndex = training(splits, k);
+            tstIndex = test(splits, k);
 
-    	trnSet = datasetSignatures(:, trnIndex)';
-    	trnLbl = datasetLabels(trnIndex)';
-    	tstSet = datasetSignatures(:, tstIndex)';
-     	tstLbl = datasetLabels(tstIndex)';
+            trnSet = datasetSignatures(:, trnIndex)';
+            trnLbl = datasetLabels(trnIndex)';
+            tstSet = datasetSignatures(:, tstIndex)';
+            tstLbl = datasetLabels(tstIndex)';
 
-        dist = pdist2(tstSet, trnSet);
+            dist = pdist2(tstSet, trnSet);
+            [~, id] = min(dist, [], 2);
+            predictedLabels(tstIndex) = datasetLabels(id)';
+        end
+
+        showResults(datasetLabels', predictedLabels, show_plot, 'NN Classification');
+        fprintf('Elapsed time: %.2f s\n\n', etime(clock, start_time));
+    else
+        %Evaluate on test set
+        dist = pdist2(testSignatures', trainSignatures');
         [~, id] = min(dist, [], 2);
-        predictedLabels(tstIndex) = datasetLabels(id)';
+        predictedLabels = trainLabels(id)';
+        showResults(testLabels', predictedLabels, show_plot, 'NN Classification');
+        fprintf('Elapsed time: %.2f s\n\n', etime(clock, start_time));
     end
-
-    showResults(datasetLabels', predictedLabels, show_plot, 'NN Classification');
-    fprintf('Elapsed time: %.2f s\n\n', etime(clock, start_time));
 end
 
 %% SVM Classifier %%
