@@ -39,7 +39,16 @@ I risultati ottenuti con queste modifiche sono molto migliori dei precedenti, an
 
 I risultati sono ottenuti cross-validando il dataset in 10 sottoparti. La classificazione è fatta tramite SVM, utilizzando però la libreria open-source \emph{libSVM}\footnote{LibSVM, \emph{A Library for Support Vector Machines}, https://www.csie.ntu.edu.tw/~cjlin/libsvm/} alla versione 3.2. L'utilizzo di questa libreria ha consentito di poter meglio personalizzare i parametri del classificatore e presenta una migliorazione nei tempi di computazione rispetto alla versione implementata nativamente in Matlab.
 
-I risultati ottenuti vengono presentati nella matrice di confusione, Figura \ref{fig:mat2} e nella Tabella \ref{table:2}.
+E' stato inizialmente provata la classificazione mediante Nearest Neighbour (1NN), ottenendo però pessimi risultati, mostrati in Figura \ref{fig:nn}.
+
+\begin{figure}[H] 
+  \centering
+    \includegraphics[width=0.9\textwidth]{images/confusion_matrix_nn.png}
+    \caption{{\small \textit{Matrice di confusione NN}}}
+    \label{fig:nn}
+\end{figure}
+
+I risultati ottenuti mediante classificazione con SVM vengono presentati in Figura \ref{fig:mat2} e nella Tabella \ref{table:2}.
 
 \begin{figure}[H] 
   \centering
@@ -71,3 +80,71 @@ I risultati ottenuti vengono presentati nella matrice di confusione, Figura \ref
 Il miglior risultato ottenuto ha classificato correttamente 1159 cellule su 1455, con un accuratezza totale del 79.66 \%.
 
 Particolari miglioramenti si hanno per quanto riguarda la classificazione di cellule con pattern \emph{citoplasmico} e \emph{omogeneo}.
+
+
+\subsection{Confronto tra due dataset diversi}
+
+Come ultima verifica sono stati confrontati due dataset diversi di contest di anni consecutivi: quello del 2013 e quello del 2014.
+
+I due dataset differivano principalmente per tipi di immagine (nel 2013 le immagini rappresentavano la singola cellula, mentre nel 2014 un intero vetrino) e per numero di immagini, 1008 immagini per il training (ma a singola cellula) e 137 per il test (a intero vetrino). Nella prova effettuata il dataset del 2013 è stato utilizzato per la creazione del modello, \emph{training}, mentre quello del 2014 come test.
+
+I risultati ottenuti stavolta sono stati migliori nel caso di classificazione mediante Nearest Neighbour, con un accuratezza del 51.82\% (vedi Figura \ref{fig:2014nn}.
+
+\begin{figure}[H] 
+  \centering
+    \includegraphics[width=0.9\textwidth]{images/conf_mat_2014_nn.png}
+    \caption{{\small \textit{Matrice di confusione NN}}}
+    \label{fig:2014nn}
+\end{figure}
+
+\begin{table}[H]
+\centering
+\footnotesize
+\begin{tabular}{|l | c | c | c |} 
+ \hline 
+ \textbf{Classe} &  \textbf{Totale} & \textbf{Corretti} & \textbf{Percentuale} \\ [0.5ex] 
+ \hline\hline
+ Omogeneo & 20 & 10 & 50.00\\
+ Punteggiato & 49 & 30 & 61.22\\
+ Nucleolare & 11 & 1 & 9.09\\
+ Centromero & 0 & 0 & 0.00\\
+ Mitocondriale & 15 & 11 & 73.33\\
+ Citoplasmico & 9 & 0 & 0.00\\
+ Numem & 33 & 19 & 57.58\\
+ \hline
+\end{tabular}
+\caption{Risultati}
+\label{table:2014resnn}
+\end{table}
+
+Vengono invece presentati ora i risultati in merito alla classificazione mediante SVM: l'accuratezza totale è del 34.06\%, un risultato ben peggiore del caso precedente, come mostrato in Figura \ref{fig:2014svm}.
+
+In questo caso il problema potrebbe essere rappresentato dalla diversità dei dataset comparati che, soprattutto nel caso del 2014, era composto da interi vetrini e non singole cellule.
+
+\begin{figure}[H] 
+  \centering
+    \includegraphics[width=0.9\textwidth]{images/conf_mat_2014_svm.png}
+    \caption{{\small \textit{Matrice di confusione SVM}}}
+    \label{fig:2014svm}
+\end{figure}
+
+\begin{table}[H]
+\centering
+\footnotesize
+\begin{tabular}{|l | c | c | c |} 
+ \hline 
+ \textbf{Classe} &  \textbf{Totale} & \textbf{Corretti} & \textbf{Percentuale} \\ [0.5ex] 
+ \hline\hline
+ Omogeneo & 20 & 1 & 5.00\\
+ Punteggiato & 49 & 29 & 59.18\\
+ Nucleolare & 11 & 4 & 36.36\\
+ Centromero & 0 & 0 & 0.00\\
+ Mitocondriale & 15 & 13 & 86.67\\
+ Citoplasmico & 9 & 0 & 0.00\\
+ Numem & 33 & 0 & 0.00\\
+ \hline
+\end{tabular}
+\caption{Risultati}
+\label{table:2014ressvm}
+\end{table}
+

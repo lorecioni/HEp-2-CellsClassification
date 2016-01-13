@@ -18,4 +18,5 @@
 \contentsline {subsection}{\numberline {7.1}Analisi}{12}{subsection.7.1}
 \contentsline {subsection}{\numberline {7.2}Miglioramento del dataset}{13}{subsection.7.2}
 \contentsline {subsubsection}{\numberline {7.2.1}Risultati}{13}{subsubsection.7.2.1}
-\contentsline {section}{\numberline {8}Conclusioni}{15}{section.8}
+\contentsline {subsection}{\numberline {7.3}Confronto tra due dataset diversi}{15}{subsection.7.3}
+\contentsline {section}{\numberline {8}Conclusioni}{17}{section.8}

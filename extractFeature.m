@@ -17,7 +17,7 @@ delta = configuration.delta;
 start_time = clock;
 
 train_size = size(trainSet, 1);
-%test_size = size(testSet, 1);
+test_size = size(testSet, 1);
 
 % Number of images found
 image_number = 0;

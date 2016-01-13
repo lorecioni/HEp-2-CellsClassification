@@ -20,11 +20,11 @@ classdef configuration
        );
 
        %Grayscale
-       gray = false;
+       gray = true;
    
        %Image resize (if set to false image will not be resized)
        resize = true;
-       resizeTo = 75;
+       resizeTo = 500;
        
        %Gabor Filter options
        Gabor_options = struct(...
@@ -34,8 +34,8 @@ classdef configuration
            'show_plot', false);
        
        %Window size and overlap
-       block_size = 20;
-       delta = 5;
+       block_size = 80;
+       delta = 40;
        
        %GMM K
        K = 16;
@@ -43,7 +43,7 @@ classdef configuration
        %Classification
        use_NN_classifier = true;
        use_SVM_classifier = true;
-       crossvalidate = true;
+       crossvalidate = false;
        crossvalidate_SVM_parameters = false;
        kFolds = 10;
        showConfusionMatrix = true;
