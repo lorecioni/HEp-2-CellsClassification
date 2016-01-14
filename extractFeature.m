@@ -43,7 +43,7 @@ if configuration.extract_train
         end
 
         I = imread(filename);
-        M = im2bw(imread(mask), 0.5);
+        M = imread(mask);
 
         %Resize images
         if(configuration.resize)
@@ -98,7 +98,7 @@ if configuration.extract_test
         end
 
         I = imread(filename);
-        M = im2bw(imread(mask), 0.5);
+        M = imread(mask);
 
         %Resize images
         if(configuration.resize)

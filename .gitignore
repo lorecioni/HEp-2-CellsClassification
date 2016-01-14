@@ -21,3 +21,21 @@ lib/libsvm-3.20/matlab/libsvmread.mexmaci64
 mat/trainSet_FULL.mat
 
 *.m~
+
+mat/2013 Train/Cov_Gabor_Train_2013.mat
+
+mat/2014 Faraki/Cov_Gabor_Test_Faraki.mat
+
+mat/2014 Faraki/Cov_Gabor_Train_Faraki.mat
+
+mat/2014 Full/Cov_Gabor_Test_2014.mat
+
+mat/2013 Train/testSet_2013.mat
+
+mat/2014 Full/trainSet_FULL.mat
+
+mat/2014 Full/trainSetFull.mat
+
+mat/testSet_2013.mat
+
+mat/testSet_2013.mat
