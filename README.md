@@ -6,8 +6,8 @@ Matlab code implementing [Fisher tensors for classifying human epithelial cells]
 
 Before launching the program edit configuration file.
 
-- `full_imags` for processing dataset with full images (more than one cell for each image)
-- `cell_images` for processing cells image (single cell for each image)
+- `extract_train` for extracting features from train images
+- `extract_train` for extracting features from test images
 
 Single cell configuration
 
@@ -18,31 +18,31 @@ Single cell configuration
 
 Full image configuration
 
-- `full_image_path` full image folder path.
-- `full_image_prefix` full images filename prefix.
-- `full_image_ext` full images extension.
-- `full_validation_format` full images validation file format (_xls_, _xlsx_, _csv_). _xls_ format may not be read correctly on Unix systems.
-- `full_validation_file_worksheet_name` full images worksheet name.
-- `full_validation_file` full images file for creating the _training set_.
-- `full_validation_file_image_ids_column` full images column index of image ID.
-- `full_validation_file_image_label_column` full images column index of labels.
+- `train_path` train images folder path.
+- `train_labels` train images groundtruth (mat file).
+- `test_path` test images folder path.
+- `test_labels` test images groundtruth (mat file).
+
+Patterns
+
+- `patterns` maps patterns names into ids.
 
 Feature extraction option
 
 - `Gabor_options` Gabor filters settings.
 - `block_size` sliding window size.
-- `delta` sliding window ste
+- `delta` sliding window step
+- `gray` convert images in grayscale (if they are not).
 - `resize` _true/false_, if true images will be resized. 
+- `resizeTo` if `resize` is true set the width of the resized images.
 
 Classification options
 
 - `use_NN_classifier` evaluate results with NN classifier.
 - `use_SVM_classifier` evaluate results with SVM classifier.
 - `K` number of gaussians in GMM.
-- `K` number of gaussians in GMM.
-- `patterns` map the patterns with ids.
-- `crossvalidate` for evaluate dataset with crossvalidation
-- `crossvalidate_SVM_parameters` for tuning SVM parameters with crossvalidation (slow)
+- `crossvalidate` for evaluate dataset with crossvalidation.
+- `crossvalidate_SVM_parameters` for tuning SVM parameters with crossvalidation (slow).
 - `kFolds` number of folds for cross-validation. 
 - `showConfusionMatrix` display confusion matrix.
 
@@ -50,14 +50,13 @@ Classification options
 
 Prepare first your training set. You can choose between:
 
-- `loadCellDataset` loads single cells dataset.
-- `loadImageDataset` loads full image dataset.
+- `loadDataset` loads dataset images and groundtruth. Creates a mat file for associating image filename, mask filename and pattern id.
 
 This will show you a table containing image id, label and filename.
 
 Run the code as follows: 
 
-- `extractImages/extractImagesCells` extracts Covariance Descriptor from each cells/image in dataset.
+- `extractFeature` extracts Covariance Descriptor from each image in dataset.
 - `runGMM` execute GMM.
 - `saveSignatures` save signatures for images, fisher tensors.
-- `runSVM` run SVM classifier.
+- `runClassifier` run SVM classifier.
