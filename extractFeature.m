@@ -66,13 +66,13 @@ if configuration.extract_train
 
                 [features, flag] = Compute_Gabor_Cov_Features(block, GR, GI, mskBlock, 0.1);
                 if flag == 1
-                    cov_Sample.X(:, block_ind, counter) = features;                       
+                    cov_Sample.X(:, block_ind, i) = features;                       
                     block_ind = block_ind + 1;                              
                 end
              end
         end
-        cov_Sample.y(counter) = cell2mat(trainSet(i, 3));
-        cov_Sample.Nblocks(counter) = block_ind - 1;
+        cov_Sample.y(i) = cell2mat(trainSet(i, 3));
+        cov_Sample.Nblocks(i) = block_ind - 1;
         fprintf('Image processed: %d / %.2f %%', counter, ...
             (counter * 100/image_number));
         fprintf(' - Elapsed time: %.2f s\n', etime(clock, start_time));
@@ -121,13 +121,13 @@ if configuration.extract_test
 
                 [features, flag] = Compute_Gabor_Cov_Features(block, GR, GI, mskBlock, 0.1);
                 if flag == 1
-                    cov_Sample.X(:, block_ind, counter) = features;                       
+                    cov_Sample.X(:, block_ind, i) = features;                       
                     block_ind = block_ind + 1;                              
                 end
              end
         end
-        cov_Sample.y(counter) = cell2mat(testSet(i, 3));
-        cov_Sample.Nblocks(counter) = block_ind - 1;
+        cov_Sample.y(i) = cell2mat(testSet(i, 3));
+        cov_Sample.Nblocks(i) = block_ind - 1;
         fprintf('Image processed: %d / %.2f %%', counter, ...
             (counter * 100/image_number));
         fprintf(' - Elapsed time: %.2f s\n', etime(clock, start_time));

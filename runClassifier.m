@@ -1,7 +1,9 @@
-clear; clc;
+clear; clc; close all;
 addpath('./utils');
 K = configuration.K;
 show_plot = configuration.showConfusionMatrix;
+
+fprintf('-- Nearest Neighbour Classifier --\n');
 
 load(['./mat/signaturesFV_K' int2str(K)]);
 
@@ -12,32 +14,20 @@ kFolds = configuration.kFolds;
 
 if configuration.use_NN_classifier
     
-    fprintf('-- Nearest Neighbour Classifier --\n');
     start_time = clock;
     if configuration.crossvalidate  
         
         datasetSignatures = cat(2, trainSignatures, testSignatures);
         datasetLabels = cat(2, trainLabels, testLabels);
-
         predictedLabels = zeros(size(datasetSignatures, 2), 1);
 
-        % Split dataset into k folds
-        splits = cvpartition(1:size(datasetSignatures, 2), 'kFold', kFolds);
-
-        for k = 1:kFolds
-            trnIndex = training(splits, k);
-            tstIndex = test(splits, k);
-
-            trnSet = datasetSignatures(:, trnIndex)';
-            trnLbl = datasetLabels(trnIndex)';
-            tstSet = datasetSignatures(:, tstIndex)';
-            tstLbl = datasetLabels(tstIndex)';
-
-            dist = pdist2(tstSet, trnSet);
-            [~, id] = min(dist, [], 2);
-            predictedLabels(tstIndex) = datasetLabels(id)';
+        dist = pdist2(datasetSignatures', datasetSignatures');
+        for k = 1:length(dist)
+            dist(k, k) = Inf;
         end
-
+        
+        [~, id] = min(dist, [], 2);
+        predictedLabels = datasetLabels(id)';
         showResults(datasetLabels', predictedLabels, show_plot, 'NN Classification');
         fprintf('Elapsed time: %.2f s\n\n', etime(clock, start_time));
     else
@@ -49,6 +39,7 @@ if configuration.use_NN_classifier
         fprintf('Elapsed time: %.2f s\n\n', etime(clock, start_time));
     end
 end
+drawnow;
 
 %% SVM Classifier %%
 

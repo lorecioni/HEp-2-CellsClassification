@@ -44,7 +44,7 @@ classdef configuration
        use_NN_classifier = true;
        use_SVM_classifier = true;
        crossvalidate = false;
-       crossvalidate_SVM_parameters = false;
+       crossvalidate_SVM_parameters = true;
        kFolds = 10;
        showConfusionMatrix = true;
    end
