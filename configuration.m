@@ -5,7 +5,7 @@ classdef configuration
        
        %Extract image feature for train and test
        extract_train = true;
-       extract_test = true;
+       extract_test = false;
        
        %Paths for train and test dataset
        train_path = 'dataset/train/'; 

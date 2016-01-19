@@ -58,12 +58,16 @@ if configuration.extract_train
                 temp2 = cs:cs + block_size - 1;
                 block = I(temp1, temp2, :);
                 mskBlock = M(temp1, temp2);
-
+                if ~islogical(mskBlock)
+                    mskBlock = im2bw(double(mskBlock)/255.0, 0.2);
+                end
                 %Considering only green level or rgb2gray(block)
                 if configuration.gray
-                    block = block(:, :, 2);
+                    if size(block, 3) > 1
+                        block = block(:, :, 2);
+                    end
                 end
-
+                
                 [features, flag] = Compute_Gabor_Cov_Features(block, GR, GI, mskBlock, 0.1);
                 if flag == 1
                     cov_Sample.X(:, block_ind, i) = features;                       
@@ -113,10 +117,14 @@ if configuration.extract_test
                 temp2 = cs:cs + block_size - 1;
                 block = I(temp1, temp2, :);
                 mskBlock = M(temp1, temp2);
-
+                if ~islogical(mskBlock)
+                    mskBlock = im2bw(double(mskBlock)/255.0, 0.2);
+                end
                 %Considering only green level or rgb2gray(block)
                 if configuration.gray
-                    block = block(:, :, 2);
+                    if size(block, 3) > 1
+                        block = block(:, :, 2);
+                    end
                 end
 
                 [features, flag] = Compute_Gabor_Cov_Features(block, GR, GI, mskBlock, 0.1);
